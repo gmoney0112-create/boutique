@@ -3,10 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atelier Luna — Bridal, Quinceañera & Formal Boutique</title>
+<title>Atelier Luna — Bridal, Quinceañera &amp; Formal Boutique</title>
+<meta name="description" content="Atelier Luna is a bridal, quinceañera & formal boutique offering private styling appointments and tailored gowns in San Antonio, TX.">
+<meta name="theme-color" content="#6B1F33">
+
+<!-- TODO (LAUNCH_CHECKLIST.md #32/#33): replace this placeholder with the real domain once hosted -->
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.com/boutique.html">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atelier Luna">
+<meta property="og:title" content="Atelier Luna — Bridal, Quinceañera & Formal Boutique">
+<meta property="og:description" content="Private fittings, personal styling, and gowns tailored to exactly who you are — for weddings, quinceañeras, and formal occasions.">
+<meta property="og:image" content="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE.com/boutique.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (see favicon.svg — simple crescent monogram, swap for a real logo mark when ready) -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!--
+  TODO (LAUNCH_CHECKLIST.md #9): pick an analytics provider and paste its snippet here.
+  Privacy-friendly option (no cookie banner needed):
+  <script defer data-domain="YOUR-DOMAIN-HERE.com" src="https://plausible.io/js/script.js"></script>
+  Or Google Analytics 4 — see plausible.io / analytics.google.com for setup.
+-->
+
+<!-- Structured data for search engines. TODO: fill in real phone/address once confirmed (LAUNCH_CHECKLIST.md #27) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Atelier Luna",
+  "description": "Bridal, quinceañera, and formal fittings by appointment in San Antonio.",
+  "url": "https://YOUR-DOMAIN-HERE.com/boutique.html",
+  "telephone": "TODO-ADD-PHONE-NUMBER",
+  "email": "TODO-ADD-EMAIL-ADDRESS",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "TODO-ADD-STREET-ADDRESS",
+    "addressLocality": "San Antonio",
+    "addressRegion": "TX",
+    "postalCode": "TODO-ADD-ZIP",
+    "addressCountry": "US"
+  }
+}
+</script>
+
 <style>
   :root{
     --ivory:#EFE8DD;
@@ -53,7 +101,22 @@
     padding:0 clamp(20px, 5vw, 64px);
   }
 
-  /* photography blocks — currently temporary stock images, swap for real client photography before launch */
+  /* Accessibility helpers */
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+  .skip-link{
+    position:absolute; left:12px; top:-48px; z-index:100;
+    background:var(--ink); color:var(--ivory);
+    padding:10px 18px; border-radius:2px;
+    transition:top 0.2s ease;
+  }
+  .skip-link:focus{ top:12px; }
+
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+
+  /* photography blocks — real client photography still needed, see ASSETS.md and LAUNCH_CHECKLIST.md #1 */
   .ph{
     position:relative;
     overflow:hidden;
@@ -66,18 +129,6 @@
     position:absolute; inset:0; width:100%; height:100%;
     object-fit:cover; z-index:0;
   }
-  .ph-label{
-    position:relative; z-index:2;
-    font-family:'Inter', sans-serif;
-    font-size:0.65rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--wine);
-    background:rgba(239,232,221,0.88);
-    padding:5px 10px;
-    margin:14px;
-    border:1px solid rgba(107,31,51,0.25);
-  }
 
   /* ---------- Nav ---------- */
   header{
@@ -86,11 +137,24 @@
     backdrop-filter:blur(6px);
     border-bottom:1px solid rgba(36,19,24,0.08);
   }
+  @supports not (backdrop-filter: blur(1px)){
+    header{ background:rgba(239,232,221,0.98); }
+  }
   nav{
+    position:relative;
     display:flex; align-items:center; justify-content:space-between;
     padding:18px clamp(20px,5vw,64px);
   }
-  .logo{ font-family:'Fraunces', serif; font-size:1.3rem; letter-spacing:0.02em; }
+  .logo{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Fraunces', serif; font-size:1.3rem; letter-spacing:0.02em;
+  }
+  .logo svg{ width:20px; height:20px; flex:none; }
+  .nav-toggle{
+    display:none; background:none; border:none; cursor:pointer; padding:8px;
+    color:var(--ink);
+  }
+  .nav-toggle svg{ display:block; width:24px; height:24px; }
   .nav-links{ display:flex; gap:32px; align-items:center; }
   .nav-links a{ font-size:0.92rem; position:relative; padding-bottom:4px; }
   .nav-links a:not(.btn)::after{
@@ -107,6 +171,8 @@
     font-size:0.88rem;
     letter-spacing:0.03em;
     border:1px solid var(--wine);
+    cursor:pointer;
+    font-family:inherit;
     transition:background 0.3s ease, color 0.3s ease;
   }
   .btn:hover{ background:transparent; color:var(--wine); }
@@ -124,7 +190,6 @@
     overflow:hidden;
   }
   .hero .ph{ position:absolute; inset:0; min-height:0; align-items:flex-start; z-index:0; }
-  .hero .ph-label{ margin:96px 20px 0; }
   .hero-scale{
     position:absolute; inset:0; z-index:1;
     pointer-events:none;
@@ -197,7 +262,6 @@
   .story{ padding:90px 0; background:var(--wine); color:var(--ivory); }
   .story .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
   .story .ph{ min-height:380px; }
-  .story .ph-label{ color:var(--ivory); background:rgba(36,19,24,0.45); border-color:rgba(239,232,221,0.3); }
   .story .eyebrow{ color:var(--gold); }
   .story h2{ color:var(--ivory); font-size:clamp(1.8rem,3vw,2.4rem); margin:14px 0 18px; }
   .story p{ color:rgba(239,232,221,0.85); margin-bottom:14px; }
@@ -212,25 +276,84 @@
   .t-card p.quote{ font-family:'Fraunces', serif; font-size:1.02rem; margin-bottom:18px; }
   .t-card .who{ font-size:0.85rem; color:var(--wine); font-weight:600; }
 
-  /* ---------- Final CTA ---------- */
-  .final-cta{ padding:110px 0; text-align:center; }
+  /* ---------- FAQ ---------- */
+  .faq{ padding:90px 0; }
+  .faq-list{ margin-top:40px; max-width:760px; }
+  .faq-list details{
+    border-bottom:1px solid rgba(36,19,24,0.12);
+    padding:20px 0;
+  }
+  .faq-list summary{
+    font-family:'Fraunces', serif; font-size:1.08rem; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    list-style:none;
+  }
+  .faq-list summary::-webkit-details-marker{ display:none; }
+  .faq-list summary::after{
+    content:'+'; font-family:'Inter', sans-serif; font-size:1.3rem; color:var(--wine); flex:none;
+  }
+  .faq-list details[open] summary::after{ content:'−'; }
+  .faq-list p{ color:rgba(36,19,24,0.78); margin-top:14px; max-width:640px; }
+
+  /* ---------- Final CTA / Contact ---------- */
+  .final-cta{ padding:110px 0 90px; text-align:center; }
   .final-cta h2{ font-size:clamp(2rem,4vw,3rem); margin-bottom:18px; }
-  .final-cta p{ color:rgba(36,19,24,0.75); max-width:460px; margin:0 auto 34px; }
+  .final-cta > .wrap > p{ color:rgba(36,19,24,0.75); max-width:460px; margin:0 auto 34px; }
+
+  .contact-form{
+    max-width:520px; margin:44px auto 0; text-align:left;
+    display:grid; gap:18px;
+  }
+  .form-row{ display:flex; flex-direction:column; gap:6px; }
+  .form-row label{ font-size:0.82rem; font-weight:600; color:var(--ink); }
+  .form-row input, .form-row select, .form-row textarea{
+    font-family:inherit; font-size:0.96rem; color:var(--ink);
+    padding:12px 14px; border:1px solid rgba(36,19,24,0.25); background:#fff;
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus{
+    border-color:var(--wine);
+  }
+  .hp-field{ position:absolute; left:-9999px; top:-9999px; }
+  .contact-form .btn{ justify-self:start; }
+  .form-note{ font-size:0.8rem; color:rgba(36,19,24,0.55); margin-top:4px; }
 
   footer{ background:var(--ink); color:rgba(239,232,221,0.7); padding:60px 0 30px; }
-  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
   footer h4{ font-family:'Fraunces', serif; color:var(--ivory); font-size:1.05rem; margin-bottom:16px; }
   footer .logo{ color:var(--ivory); margin-bottom:14px; }
   footer a{ display:block; font-size:0.9rem; margin-bottom:10px; color:rgba(239,232,221,0.7); }
   footer a:hover{ color:var(--gold); }
+  .footer-blurb{ max-width:280px; font-size:0.88rem; }
+  .newsletter{ margin-top:24px; }
+  .newsletter-blurb{ font-size:0.85rem; max-width:280px; margin-bottom:0; }
+  .newsletter-form{ display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+  .social-links{ display:flex; gap:14px; margin-top:20px; }
+  .newsletter-form input{
+    font-family:inherit; font-size:0.9rem; padding:10px 12px;
+    border:1px solid rgba(239,232,221,0.3); background:transparent; color:var(--ivory);
+    flex:1 1 160px; min-width:0;
+  }
+  .newsletter-form input::placeholder{ color:rgba(239,232,221,0.5); }
   .footer-bottom{
     border-top:1px solid rgba(239,232,221,0.12); padding-top:22px; font-size:0.8rem;
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
     color:rgba(239,232,221,0.45);
   }
+  .footer-bottom a{ display:inline; margin-bottom:0; color:inherit; }
+  .footer-bottom a:hover{ color:var(--gold); }
 
   @media (max-width: 860px){
-    .nav-links{ display:none; }
+    .nav-toggle{ display:inline-flex; }
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; align-items:flex-start; gap:0;
+      background:var(--ivory); border-bottom:1px solid rgba(36,19,24,0.08);
+      max-height:0; overflow:hidden; transition:max-height 0.3s ease;
+      padding:0 clamp(20px,5vw,64px);
+    }
+    .nav-links.open{ max-height:420px; padding-top:12px; padding-bottom:20px; }
+    .nav-links a{ padding:12px 0; width:100%; }
+    .nav-links a.btn{ margin-top:8px; text-align:center; }
     .values-grid{ grid-template-columns:1fr; gap:36px; }
     .cat-row, .cat-row.reverse{ grid-template-columns:1fr; direction:ltr; }
     .cat-row .ph{ min-height:280px; }
@@ -252,25 +375,39 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <header>
-  <nav>
-    <a href="#" class="logo">Atelier Luna</a>
-    <div class="nav-links">
+  <nav aria-label="Primary">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
+      Atelier Luna
+    </a>
+    <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="#bridal">Bridal</a>
       <a href="#quince">Quinceañera</a>
       <a href="#formal">Formal</a>
       <a href="#lookbook">Lookbook</a>
-      <a href="#" class="btn">Book Your Fitting</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn" data-cta="nav">Book Your Fitting</a>
     </div>
   </nav>
 </header>
 
+<main id="main">
+
 <section class="hero">
   <div class="ph">
-    <img src="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Boutique stylist fitting a gown in the studio" loading="eager">
-    <div class="ph-label">Temp stock photo — swap for real fitting photography</div>
+    <img
+      src="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      srcset="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w"
+      sizes="100vw"
+      alt="Boutique stylist fitting a gown in the studio" loading="eager">
   </div>
   <div class="hero-scale"></div>
   <div class="hero-content">
@@ -278,13 +415,13 @@
     <h1>Every Dress Tells a Story.<br>Let's Find Yours.</h1>
     <p>One boutique, three milestones. Private fittings, personal styling, and gowns tailored to exactly who you are — not just what's on the rack.</p>
     <div class="hero-ctas">
-      <a href="#" class="btn">Book Your Fitting</a>
-      <a href="#lookbook" class="btn btn-ghost">View the Lookbook</a>
+      <a href="#contact" class="btn" data-cta="hero-book">Book Your Fitting</a>
+      <a href="#lookbook" class="btn btn-ghost" data-cta="hero-lookbook">View the Lookbook</a>
     </div>
   </div>
 </section>
 
-<section class="values">
+<section class="values" aria-label="Why choose us">
   <div class="wrap">
     <span class="eyebrow">Why Atelier Luna</span>
     <div class="values-grid">
@@ -307,50 +444,59 @@
   </div>
 </section>
 
-<section class="categories">
+<section class="categories" aria-label="Shop by occasion">
 
   <div class="cat-row" id="bridal">
     <div class="ph">
-      <img src="https://images.pexels.com/photos/11439330/pexels-photo-11439330.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Bride in an ivory wedding gown, soft indoor light" loading="lazy">
-      <div class="ph-label">Temp stock photo</div>
+      <img
+        src="https://images.pexels.com/photos/11439330/pexels-photo-11439330.jpeg?auto=compress&cs=tinysrgb&w=1000"
+        srcset="https://images.pexels.com/photos/11439330/pexels-photo-11439330.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/11439330/pexels-photo-11439330.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w, https://images.pexels.com/photos/11439330/pexels-photo-11439330.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w"
+        sizes="(max-width: 860px) 100vw, 50vw"
+        alt="Bride in an ivory wedding gown, soft indoor light" loading="lazy">
     </div>
     <div class="cat-text">
       <span class="eyebrow">Bridal</span>
       <h2>Your dress isn't off the rack. Neither is the experience.</h2>
       <p>A curated pull of gowns chosen for your venue, season, and silhouette — then tailored until it fits exactly like it should.</p>
-      <a href="#" class="btn">Book Your Fitting</a>
+      <a href="#contact" class="btn" data-cta="bridal-book">Book Your Fitting</a>
     </div>
   </div>
 
   <div class="cat-row reverse" id="quince">
     <div class="ph">
-      <img src="https://images.pexels.com/photos/31482000/pexels-photo-31482000.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Young woman in an elegant lavender quinceañera gown" loading="lazy">
-      <div class="ph-label">Temp stock photo</div>
+      <img
+        src="https://images.pexels.com/photos/31482000/pexels-photo-31482000.jpeg?auto=compress&cs=tinysrgb&w=1000"
+        srcset="https://images.pexels.com/photos/31482000/pexels-photo-31482000.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/31482000/pexels-photo-31482000.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w, https://images.pexels.com/photos/31482000/pexels-photo-31482000.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w"
+        sizes="(max-width: 860px) 100vw, 50vw"
+        alt="Young woman in an elegant lavender quinceañera gown" loading="lazy">
     </div>
     <div class="cat-text">
       <span class="eyebrow">Quinceañera</span>
       <h2>Her first grown-up moment, done right.</h2>
       <p>A joint consultation for mom and daughter — clear on budget, focused on how she wants to feel walking into her own celebration.</p>
-      <a href="#" class="btn">Book Your Fitting</a>
+      <a href="#contact" class="btn" data-cta="quince-book">Book Your Fitting</a>
     </div>
   </div>
 
   <div class="cat-row" id="formal">
     <div class="ph">
-      <img src="https://images.pexels.com/photos/33854740/pexels-photo-33854740.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Woman in a sparkling purple formal evening gown" loading="lazy">
-      <div class="ph-label">Temp stock photo</div>
+      <img
+        src="https://images.pexels.com/photos/33854740/pexels-photo-33854740.jpeg?auto=compress&cs=tinysrgb&w=1000"
+        srcset="https://images.pexels.com/photos/33854740/pexels-photo-33854740.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/33854740/pexels-photo-33854740.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w, https://images.pexels.com/photos/33854740/pexels-photo-33854740.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w"
+        sizes="(max-width: 860px) 100vw, 50vw"
+        alt="Woman in a sparkling purple formal evening gown" loading="lazy">
     </div>
     <div class="cat-text">
       <span class="eyebrow">Formal &amp; Prom</span>
       <h2>In-stock gowns, ready for your date.</h2>
       <p>Shorter timeline, same personal attention. Tell us your date — we'll hold your size while you decide.</p>
-      <a href="#" class="btn">Book Your Fitting</a>
+      <a href="#contact" class="btn" data-cta="formal-book">Book Your Fitting</a>
     </div>
   </div>
 
 </section>
 
-<section class="lookbook" id="lookbook">
+<section class="lookbook" id="lookbook" aria-label="Lookbook gallery">
   <div class="wrap">
     <div class="lookbook-head">
       <span class="eyebrow">The Lookbook</span>
@@ -358,53 +504,67 @@
     </div>
     <div class="masonry">
       <div class="ph tall reveal">
-        <img src="https://images.pexels.com/photos/16910979/pexels-photo-16910979.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bride portrait in a forest setting" loading="lazy">
-        <div class="ph-label">Temp stock</div>
+        <img src="https://images.pexels.com/photos/16910979/pexels-photo-16910979.jpeg?auto=compress&cs=tinysrgb&w=800"
+          srcset="https://images.pexels.com/photos/16910979/pexels-photo-16910979.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/16910979/pexels-photo-16910979.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+          sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
+          alt="Bride portrait in a forest setting" loading="lazy">
       </div>
       <div class="ph short reveal">
-        <img src="https://images.pexels.com/photos/19595293/pexels-photo-19595293.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Prom portrait in a navy blue gown" loading="lazy">
-        <div class="ph-label">Temp stock</div>
+        <img src="https://images.pexels.com/photos/19595293/pexels-photo-19595293.jpeg?auto=compress&cs=tinysrgb&w=800"
+          srcset="https://images.pexels.com/photos/19595293/pexels-photo-19595293.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/19595293/pexels-photo-19595293.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+          sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
+          alt="Prom portrait in a navy blue gown" loading="lazy">
       </div>
       <div class="ph mid reveal">
-        <img src="https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tailor cutting fabric for a custom gown" loading="lazy">
-        <div class="ph-label">Temp stock</div>
+        <img src="https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=800"
+          srcset="https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+          sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
+          alt="Tailor cutting fabric for a custom gown" loading="lazy">
       </div>
       <div class="ph mid reveal">
-        <img src="https://images.pexels.com/photos/12730973/pexels-photo-12730973.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Quinceañera in a green gown at her celebration" loading="lazy">
-        <div class="ph-label">Temp stock</div>
+        <img src="https://images.pexels.com/photos/12730973/pexels-photo-12730973.jpeg?auto=compress&cs=tinysrgb&w=800"
+          srcset="https://images.pexels.com/photos/12730973/pexels-photo-12730973.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/12730973/pexels-photo-12730973.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+          sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
+          alt="Quinceañera in a green gown at her celebration" loading="lazy">
       </div>
       <div class="ph tall reveal">
-        <img src="https://images.pexels.com/photos/14000811/pexels-photo-14000811.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bride in an ivory gown by a sunlit window" loading="lazy">
-        <div class="ph-label">Temp stock</div>
+        <img src="https://images.pexels.com/photos/14000811/pexels-photo-14000811.jpeg?auto=compress&cs=tinysrgb&w=800"
+          srcset="https://images.pexels.com/photos/14000811/pexels-photo-14000811.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/14000811/pexels-photo-14000811.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+          sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
+          alt="Bride in an ivory gown by a sunlit window" loading="lazy">
       </div>
       <div class="ph short reveal">
-        <img src="https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Elegant pink formal dress, studio portrait" loading="lazy">
-        <div class="ph-label">Temp stock</div>
+        <img src="https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=800"
+          srcset="https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=400 400w, https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+          sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
+          alt="Elegant pink formal dress, studio portrait" loading="lazy">
       </div>
     </div>
     <div class="lookbook-cta">
-      <a href="#" class="btn btn-ghost">View Full Lookbook</a>
+      <a href="#contact" class="btn btn-ghost" data-cta="lookbook-more">View Full Lookbook</a>
     </div>
   </div>
 </section>
 
-<section class="story">
+<section class="story" id="story" aria-label="Client story">
   <div class="wrap">
     <div class="ph">
-      <img src="https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Quinceañera in a red gown with a crown, outdoor celebration" loading="lazy">
-      <div class="ph-label">Temp stock — swap for Sofia's real before/after</div>
+      <img src="https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=900"
+        srcset="https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=900 900w"
+        sizes="(max-width: 860px) 100vw, 50vw"
+        alt="Quinceañera in a red gown with a crown, outdoor celebration" loading="lazy">
     </div>
     <div>
       <span class="eyebrow">A Real Story</span>
       <h2>Sofia's Quinceañera</h2>
       <p>Eight weeks out, no dress felt like her — until her stylist started with how she wanted to feel, not a catalog of trends.</p>
       <p class="quote">"I walked into my party feeling like myself, not dressed up as someone else."</p>
-      <a href="#" class="btn">Read Sofia's Story</a>
+      <a href="#contact" class="btn" data-cta="story-read">Read Sofia's Story</a>
     </div>
   </div>
 </section>
 
-<section class="testimonials">
+<section class="testimonials" id="testimonials" aria-label="Testimonials">
   <div class="wrap">
     <span class="eyebrow">In Their Words</span>
     <div class="t-grid">
@@ -424,21 +584,114 @@
   </div>
 </section>
 
-<section class="final-cta">
+<!-- DRAFT CONTENT — generic starter copy, confirm real policies before publishing. See LAUNCH_CHECKLIST.md #14. -->
+<section class="faq" id="faq" aria-label="Frequently asked questions">
+  <div class="wrap">
+    <span class="eyebrow">Good to Know</span>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Do I need an appointment?</summary>
+        <p>Yes — every fitting is private and appointment-based so your stylist can give you their full attention. Use the form below or call ahead to reserve a time.</p>
+      </details>
+      <details>
+        <summary>How far in advance should I book?</summary>
+        <p>For bridal and quinceañera gowns that need ordering and alterations, we recommend starting several months out. For formal and prom, we can often accommodate shorter timelines — ask us about your date.</p>
+      </details>
+      <details>
+        <summary>Is there a deposit required?</summary>
+        <p>[TODO: confirm real deposit policy] Custom or ordered gowns typically require a deposit to begin the process; in-stock formal pieces may not. We'll walk you through the specifics at your fitting.</p>
+      </details>
+      <details>
+        <summary>Do you offer alterations?</summary>
+        <p>[TODO: confirm real alterations policy] Alterations can be arranged as part of your fitting so the gown fits exactly as it should before your event.</p>
+      </details>
+      <details>
+        <summary>What should I bring to my fitting?</summary>
+        <p>Comfortable undergarments similar to what you'd wear on the day, and — if you have them — the shoes and any accessories you're planning to pair with your gown.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="contact" aria-label="Contact and booking">
   <div class="wrap">
     <span class="eyebrow">Ready When You Are</span>
     <h2>Come see for yourself.</h2>
     <p>Book a private fitting and let's find the dress that's yours — for your wedding, your quinceañera, or your night to remember.</p>
-    <a href="#" class="btn">Book Your Fitting</a>
+
+    <!--
+      TODO (LAUNCH_CHECKLIST.md #23): this form does not deliver anywhere yet.
+      Create a free endpoint at https://formspree.io (or use Netlify Forms if
+      hosting on Netlify) and replace the action URL below with your real one.
+    -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" name="name" type="text" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="form-row">
+        <label for="cf-phone">Phone (optional)</label>
+        <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="form-row">
+        <label for="cf-occasion">Occasion</label>
+        <select id="cf-occasion" name="occasion">
+          <option value="bridal">Bridal</option>
+          <option value="quinceanera">Quinceañera</option>
+          <option value="formal">Formal &amp; Prom</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Tell us about your fitting</label>
+        <textarea id="cf-message" name="message" rows="4"></textarea>
+      </div>
+      <!-- Honeypot spam trap — invisible to real visitors, catches basic bots -->
+      <div class="form-row hp-field" aria-hidden="true">
+        <label for="cf-company">Company</label>
+        <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="btn" data-cta="contact-submit">Request an Appointment</button>
+      <p class="form-note">We'll get back to you to confirm your appointment time.</p>
+    </form>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="logo">Atelier Luna</div>
-        <p style="max-width:280px; font-size:0.88rem;">Bridal, quinceañera, and formal fittings by appointment in San Antonio.</p>
+        <div class="logo">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
+          Atelier Luna
+        </div>
+        <p class="footer-blurb">Bridal, quinceañera, and formal fittings by appointment in San Antonio.</p>
+
+        <div class="newsletter">
+          <h4>Stay in the Loop</h4>
+          <p class="newsletter-blurb">New arrivals and trunk show dates, occasionally.</p>
+          <!-- TODO (LAUNCH_CHECKLIST.md #26): wire to a real Mailchimp/Klaviyo/etc. list before launch -->
+          <form class="newsletter-form" action="#" method="POST">
+            <label for="nl-email" class="sr-only">Email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="you@email.com" required>
+            <button type="submit" class="btn btn-ghost" data-cta="newsletter-subscribe">Subscribe</button>
+          </form>
+        </div>
+
+        <!--
+          TODO (LAUNCH_CHECKLIST.md #29): add real social links, then uncomment.
+          <div class="social-links">
+            <a href="https://instagram.com/YOUR_HANDLE" aria-label="Instagram">Instagram</a>
+            <a href="https://facebook.com/YOUR_HANDLE" aria-label="Facebook">Facebook</a>
+          </div>
+        -->
       </div>
       <div>
         <h4>Visit</h4>
@@ -449,26 +702,55 @@
       </div>
       <div>
         <h4>Boutique</h4>
-        <a href="#">Book a Fitting</a>
-        <a href="#">Our Story</a>
-        <a href="#">Real Stories</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Book a Fitting</a>
+        <a href="#story">Our Story</a>
+        <a href="#testimonials">Real Stories</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Atelier Luna. All rights reserved.</span>
-      <span>Placeholder name, copy &amp; stock photos — replace before launch</span>
+      <span>Placeholder name, copy &amp; stock photos — replace before launch (see <a href="https://github.com/gmoney0112-create/boutique/blob/main/docs/LAUNCH_CHECKLIST.md">LAUNCH_CHECKLIST.md</a>)</span>
     </div>
   </div>
 </footer>
 
 <script>
+  // Scroll-reveal animations
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
       if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { threshold:0.15 });
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
+  // CTA click tracking — no-ops until an analytics provider is wired up (see LAUNCH_CHECKLIST.md #9/#48)
+  function trackCTA(label){
+    if (typeof window.plausible === 'function') window.plausible('CTA Click', { props: { label } });
+    else if (typeof window.gtag === 'function') window.gtag('event', 'cta_click', { label });
+  }
+  document.querySelectorAll('[data-cta]').forEach(el=>{
+    el.addEventListener('click', ()=> trackCTA(el.getAttribute('data-cta')));
+  });
 </script>
 
 </body>
