@@ -1,0 +1,7 @@
+# TODO: replace YOUR-DOMAIN-HERE.com with the real domain once hosted (see docs/LAUNCH_CHECKLIST.md #32)
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /terms.html
+
+Sitemap: https://YOUR-DOMAIN-HERE.com/sitemap.xml
