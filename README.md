@@ -1,11 +1,16 @@
-# Atelier Luna — boutique site
+# Liz Fashion — boutique site
 
-A single-page marketing site for a bridal, quinceañera & formal boutique.
-Static HTML/CSS/JS — no build step, no framework, no dependencies to
-install to run it.
+A single-page marketing site for Liz Fashion, a quinceañera, bridal &
+formal boutique in San Antonio, TX. Static HTML/CSS/JS — no build step,
+no framework, no dependencies to install to run it.
 
-**⚠️ Not launch-ready yet.** This is still a draft with placeholder
-business name, copy, stock photography, and unwired forms. Read
+Live preview: https://gmoney0112-create.github.io/boutique/ (via GitHub
+Pages, deployed from `main`).
+
+**⚠️ Not launch-ready yet.** Business identity, hours, pricing, and
+policies are real as of the latest client questionnaire response — but
+stock photography, real testimonials, brand assets, and several accounts
+(domain, booking, analytics) are still open. Read
 [`docs/LAUNCH_CHECKLIST.md`](docs/LAUNCH_CHECKLIST.md) before publishing —
 it lists exactly what's real, what's a placeholder, and what's left to do.
 
@@ -60,17 +65,15 @@ in CI on every pull request (`.github/workflows/ci.yml`).
 
 ## Deploying
 
-The fastest free option, since this repo is already on GitHub:
+Already live via GitHub Pages, deployed from `main`:
+**https://gmoney0112-create.github.io/boutique/**
 
-1. Repo **Settings → Pages → Build and deployment → Deploy from a
-   branch**.
-2. Branch: `main`, folder: `/ (root)`.
-3. Save. GitHub gives you a URL like
-   `https://<your-username>.github.io/boutique/` within a minute or two,
-   with HTTPS included automatically.
-4. Once you have a custom domain, add it under the same Pages settings and
-   update `boutique.html`'s canonical/OG tags, `sitemap.xml`, and
-   `robots.txt` (all currently have a `YOUR-DOMAIN-HERE.com` placeholder —
-   search for that string to find every spot).
+Any merge to `main` redeploys automatically within a minute or two.
+
+Once there's a real custom domain (client has deferred this choice to us —
+see `docs/LAUNCH_CHECKLIST.md` #32), add it under Settings → Pages and
+update `boutique.html`'s canonical/OG tags, `sitemap.xml`, and
+`robots.txt` (all currently have a `YOUR-DOMAIN-HERE.com` placeholder —
+search for that string to find every spot).
 
 See `docs/LAUNCH_CHECKLIST.md` for everything else before this goes live.
