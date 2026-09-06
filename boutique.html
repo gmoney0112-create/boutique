@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atelier Luna — Bridal, Quinceañera &amp; Formal Boutique</title>
-<meta name="description" content="Atelier Luna is a bridal, quinceañera & formal boutique offering private styling appointments and tailored gowns in San Antonio, TX.">
+<title>Liz Fashion — Bridal, Quinceañera &amp; Formal Boutique</title>
+<meta name="description" content="Liz Fashion is a quinceañera, bridal & formal boutique in San Antonio, TX. Walk-ins welcome, Thursday through Sunday.">
 <meta name="theme-color" content="#6B1F33">
 
 <!-- TODO (LAUNCH_CHECKLIST.md #32/#33): replace this placeholder with the real domain once hosted -->
@@ -12,9 +12,9 @@
 
 <!-- Open Graph / social preview -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Atelier Luna">
-<meta property="og:title" content="Atelier Luna — Bridal, Quinceañera & Formal Boutique">
-<meta property="og:description" content="Private fittings, personal styling, and gowns tailored to exactly who you are — for weddings, quinceañeras, and formal occasions.">
+<meta property="og:site_name" content="Liz Fashion">
+<meta property="og:title" content="Liz Fashion — Bridal, Quinceañera & Formal Boutique">
+<meta property="og:description" content="Walk in and find your dress, or let us know what you're looking for — quinceañera, bridal, and formal wear in San Antonio, TX.">
 <meta property="og:image" content="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1200">
 <meta property="og:url" content="https://YOUR-DOMAIN-HERE.com/boutique.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,24 +33,30 @@
   Or Google Analytics 4 — see plausible.io / analytics.google.com for setup.
 -->
 
-<!-- Structured data for search engines. TODO: fill in real phone/address once confirmed (LAUNCH_CHECKLIST.md #27) -->
+<!-- Structured data for search engines. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ClothingStore",
-  "name": "Atelier Luna",
-  "description": "Bridal, quinceañera, and formal fittings by appointment in San Antonio.",
+  "name": "Liz Fashion",
+  "description": "Quinceañera, bridal, and formal wear in San Antonio. Walk-ins welcome.",
   "url": "https://YOUR-DOMAIN-HERE.com/boutique.html",
-  "telephone": "TODO-ADD-PHONE-NUMBER",
-  "email": "TODO-ADD-EMAIL-ADDRESS",
+  "telephone": "+1-210-559-2575",
+  "email": "Reynalopez0329@gmail.com",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "TODO-ADD-STREET-ADDRESS",
+    "streetAddress": "1331 Bandera Rd, Local B207-208",
     "addressLocality": "San Antonio",
     "addressRegion": "TX",
-    "postalCode": "TODO-ADD-ZIP",
+    "postalCode": "78228",
     "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "10:00",
+    "closes": "18:00"
   }
 }
 </script>
@@ -275,6 +281,12 @@
   .t-card{ padding:32px 28px; background:rgba(107,31,51,0.05); border-top:2px solid var(--gold); }
   .t-card p.quote{ font-family:'Fraunces', serif; font-size:1.02rem; margin-bottom:18px; }
   .t-card .who{ font-size:0.85rem; color:var(--wine); font-weight:600; }
+  .t-card-solo{ grid-column:1/-1; text-align:center; }
+  .t-card-solo p.quote{ margin-bottom:0; max-width:56ch; margin-left:auto; margin-right:auto; }
+
+  .footer-contact{ font-style:normal; font-size:0.88rem; color:rgba(239,232,221,0.7); margin-top:14px; line-height:1.75; }
+  .footer-contact a{ display:inline; margin-bottom:0; color:inherit; }
+  .footer-contact a:hover{ color:var(--gold); }
 
   /* ---------- FAQ ---------- */
   .faq{ padding:90px 0; }
@@ -316,6 +328,18 @@
   .hp-field{ position:absolute; left:-9999px; top:-9999px; }
   .contact-form .btn{ justify-self:start; }
   .form-note{ font-size:0.8rem; color:rgba(36,19,24,0.55); margin-top:4px; }
+
+  .visit-info{
+    max-width:520px; margin:44px auto 0; text-align:left;
+    display:grid; gap:6px;
+    padding:22px 26px; background:rgba(107,31,51,0.05); border:1px solid rgba(36,19,24,0.12);
+  }
+  .visit-info p{ margin:0; font-size:0.95rem; color:var(--ink); }
+  .visit-info a{ text-decoration:underline; text-decoration-color:rgba(107,31,51,0.35); }
+  .visit-info a:hover{ color:var(--wine); }
+  .map-embed{ max-width:520px; margin:16px auto 0; }
+  .map-embed iframe{ width:100%; height:240px; border:0; display:block; }
+  .map-embed .directions-link{ display:block; margin-top:8px; font-size:0.85rem; text-align:center; text-decoration:underline; }
 
   footer{ background:var(--ink); color:rgba(239,232,221,0.7); padding:60px 0 30px; }
   .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
@@ -383,7 +407,7 @@
   <nav aria-label="Primary">
     <a href="#top" class="logo">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
-      Atelier Luna
+      Liz Fashion
     </a>
     <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -413,7 +437,7 @@
   <div class="hero-content">
     <span class="eyebrow">Bridal · Quinceañera · Formal</span>
     <h1>Every Dress Tells a Story.<br>Let's Find Yours.</h1>
-    <p>One boutique, three milestones. Private fittings, personal styling, and gowns tailored to exactly who you are — not just what's on the rack.</p>
+    <p>One boutique, three milestones. Walk in and browse, or let us know what you're looking for — quinceañera, bridal, and formal wear, all in one place in San Antonio.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn" data-cta="hero-book">Book Your Fitting</a>
       <a href="#lookbook" class="btn btn-ghost" data-cta="hero-lookbook">View the Lookbook</a>
@@ -423,7 +447,7 @@
 
 <section class="values" aria-label="Why choose us">
   <div class="wrap">
-    <span class="eyebrow">Why Atelier Luna</span>
+    <span class="eyebrow">Why Liz Fashion</span>
     <div class="values-grid">
       <div class="value reveal">
         <div class="value-mark"></div>
@@ -432,8 +456,8 @@
       </div>
       <div class="value reveal">
         <div class="value-mark"></div>
-        <h3>Styling, not rack-browsing</h3>
-        <p>Every visit is a private, appointment-based fitting with a stylist — never a self-serve rack in a crowded showroom.</p>
+        <h3>Come as you are, no appointment needed</h3>
+        <p>Walk in and browse anytime we're open, or tell us what you're looking for ahead of time and we'll have it ready.</p>
       </div>
       <div class="value reveal">
         <div class="value-mark"></div>
@@ -546,45 +570,47 @@
   </div>
 </section>
 
-<section class="story" id="story" aria-label="Client story">
+<!--
+  A real client feature (with the client's written consent) belongs here
+  eventually — see docs/LAUNCH_CHECKLIST.md #12/#43. Until then this section
+  carries the owner's own story instead of a placeholder client narrative.
+-->
+<section class="story" id="story" aria-label="Our story">
   <div class="wrap">
     <div class="ph">
-      <img src="https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=900"
-        srcset="https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/30325647/pexels-photo-30325647.jpeg?auto=compress&cs=tinysrgb&w=900 900w"
+      <img src="https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=900"
+        srcset="https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=500 500w, https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=900 900w"
         sizes="(max-width: 860px) 100vw, 50vw"
-        alt="Quinceañera in a red gown with a crown, outdoor celebration" loading="lazy">
+        alt="Dressmaker at work on a gown" loading="lazy">
     </div>
     <div>
-      <span class="eyebrow">A Real Story</span>
-      <h2>Sofia's Quinceañera</h2>
-      <p>Eight weeks out, no dress felt like her — until her stylist started with how she wanted to feel, not a catalog of trends.</p>
-      <p class="quote">"I walked into my party feeling like myself, not dressed up as someone else."</p>
-      <a href="#contact" class="btn" data-cta="story-read">Read Sofia's Story</a>
+      <span class="eyebrow">Our Story</span>
+      <h2>Why Liz Fashion</h2>
+      <p>Liz Fashion started with a simple idea: offer good-quality dresses and service that actually meets our customers' needs. We built it step by step — with effort, dedication, and by learning from every day's experience.</p>
+      <p class="quote">"We want everyone to have a good experience and feel satisfied."</p>
+      <p>What sets us apart is the personal attention we give every customer, the quality of what we offer, and our commitment to getting it right.</p>
+      <a href="#contact" class="btn" data-cta="story-visit">Come See Us</a>
     </div>
   </div>
 </section>
 
-<section class="testimonials" id="testimonials" aria-label="Testimonials">
+<!--
+  Real, consented customer quotes go here — see docs/LAUNCH_CHECKLIST.md #12.
+  Deliberately not filled with placeholder quotes: attributing invented
+  reviews to "a client" on a real, named business is exactly what we won't do.
+-->
+<section class="testimonials" id="testimonials" aria-label="Reviews">
   <div class="wrap">
-    <span class="eyebrow">In Their Words</span>
+    <span class="eyebrow">Reviews</span>
     <div class="t-grid">
-      <div class="t-card reveal">
-        <p class="quote">"They made the whole process feel calm instead of overwhelming. No pressure, ever."</p>
-        <div class="who">— Bridal client</div>
-      </div>
-      <div class="t-card reveal">
-        <p class="quote">"My daughter felt like a princess and I felt like they actually listened to our budget."</p>
-        <div class="who">— Quinceañera mom</div>
-      </div>
-      <div class="t-card reveal">
-        <p class="quote">"Found my prom dress two weeks before, and they still made it feel special."</p>
-        <div class="who">— Formal client</div>
+      <div class="t-card reveal t-card-solo">
+        <p class="quote">We're just getting started collecting reviews from Liz Fashion customers. Had a great visit? Let us know — we'd love to feature your story here.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DRAFT CONTENT — generic starter copy, confirm real policies before publishing. See LAUNCH_CHECKLIST.md #14. -->
+<!-- Alterations policy (marked below) is the one FAQ answer still awaiting a real answer — see docs/LAUNCH_CHECKLIST.md #14. -->
 <section class="faq" id="faq" aria-label="Frequently asked questions">
   <div class="wrap">
     <span class="eyebrow">Good to Know</span>
@@ -592,22 +618,34 @@
     <div class="faq-list">
       <details>
         <summary>Do I need an appointment?</summary>
-        <p>Yes — every fitting is private and appointment-based so your stylist can give you their full attention. Use the form below or call ahead to reserve a time.</p>
+        <p>No — walk-ins are always welcome during our hours (Thursday–Sunday, 10am–6pm). If you'd like a specific time reserved, just reach out and we'll do our best to accommodate you.</p>
       </details>
       <details>
         <summary>How far in advance should I book?</summary>
-        <p>For bridal and quinceañera gowns that need ordering and alterations, we recommend starting several months out. For formal and prom, we can often accommodate shorter timelines — ask us about your date.</p>
+        <p>Since walk-ins are welcome anytime we're open, most customers don't need to book ahead. If you'd like a reserved appointment, let us know your preferred date.</p>
+      </details>
+      <details>
+        <summary>How much do dresses cost?</summary>
+        <p>Quinceañera gowns start at $680 for the dress alone (packages with everything included start at $1,500), and bridesmaid dresses range from $70–$165. Ask us in person about pricing for bridal and formal wear.</p>
       </details>
       <details>
         <summary>Is there a deposit required?</summary>
-        <p>[TODO: confirm real deposit policy] Custom or ordered gowns typically require a deposit to begin the process; in-stock formal pieces may not. We'll walk you through the specifics at your fitting.</p>
+        <p>Reserving a dress requires a $200 deposit. We also offer a weekly payment plan — as low as $100 a week over about three months.</p>
       </details>
       <details>
         <summary>Do you offer alterations?</summary>
-        <p>[TODO: confirm real alterations policy] Alterations can be arranged as part of your fitting so the gown fits exactly as it should before your event.</p>
+        <p>We're confirming our alterations policy — ask us in store for the latest, and check back here soon.</p>
       </details>
       <details>
-        <summary>What should I bring to my fitting?</summary>
+        <summary>What if I damage a dress while trying it on?</summary>
+        <p>Please be careful with makeup and deodorant, which can stain, and take care not to tear the fabric. If a garment is damaged while in your care, you'll be responsible for the cost of the damage.</p>
+      </details>
+      <details>
+        <summary>What if there's a problem with my purchase?</summary>
+        <p>If a Liz Fashion product is defective, we'll issue a refund or send a replacement — but you must report it within 48 hours of purchase and have your receipt. We're unable to issue refunds after that window or without a receipt.</p>
+      </details>
+      <details>
+        <summary>What should I bring when I visit?</summary>
         <p>Comfortable undergarments similar to what you'd wear on the day, and — if you have them — the shoes and any accessories you're planning to pair with your gown.</p>
       </details>
     </div>
@@ -618,12 +656,24 @@
   <div class="wrap">
     <span class="eyebrow">Ready When You Are</span>
     <h2>Come see for yourself.</h2>
-    <p>Book a private fitting and let's find the dress that's yours — for your wedding, your quinceañera, or your night to remember.</p>
+    <p>Walk in anytime we're open, or send us a message and we'll find the dress that's yours — for your quinceañera, your wedding, or your night to remember.</p>
+
+    <div class="visit-info">
+      <p><strong>Liz Fashion</strong></p>
+      <p>1331 Bandera Rd, Local B207-208, San Antonio, TX 78228</p>
+      <p><a href="tel:+12105592575">(210)&nbsp;559&#8209;2575</a> &middot; <a href="mailto:Reynalopez0329@gmail.com">Reynalopez0329@gmail.com</a></p>
+      <p>Thursday–Sunday, 10am–6pm &middot; walk-ins welcome</p>
+    </div>
+    <div class="map-embed">
+      <iframe src="https://www.google.com/maps?q=1331+Bandera+Rd,+San+Antonio,+TX+78228&output=embed" title="Map to Liz Fashion" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="directions-link" href="https://www.google.com/maps/search/?api=1&query=1331+Bandera+Rd%2C+San+Antonio%2C+TX+78228" target="_blank" rel="noopener">Get directions</a>
+    </div>
 
     <!--
       TODO (LAUNCH_CHECKLIST.md #23): this form does not deliver anywhere yet.
       Create a free endpoint at https://formspree.io (or use Netlify Forms if
-      hosting on Netlify) and replace the action URL below with your real one.
+      hosting on Netlify) pointed at Reynalopez0329@gmail.com, then replace
+      the action URL below with your real one.
     -->
     <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-row">
@@ -648,7 +698,7 @@
         </select>
       </div>
       <div class="form-row">
-        <label for="cf-message">Tell us about your fitting</label>
+        <label for="cf-message">Tell us what you're looking for</label>
         <textarea id="cf-message" name="message" rows="4"></textarea>
       </div>
       <!-- Honeypot spam trap — invisible to real visitors, catches basic bots -->
@@ -670,9 +720,16 @@
       <div>
         <div class="logo">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
-          Atelier Luna
+          Liz Fashion
         </div>
-        <p class="footer-blurb">Bridal, quinceañera, and formal fittings by appointment in San Antonio.</p>
+        <p class="footer-blurb">Quinceañera, bridal, and formal wear in San Antonio. Walk-ins welcome.</p>
+        <address class="footer-contact">
+          1331 Bandera Rd, Local B207-208<br>
+          San Antonio, TX 78228<br>
+          <a href="tel:+12105592575">(210)&nbsp;559&#8209;2575</a><br>
+          <a href="mailto:Reynalopez0329@gmail.com">Reynalopez0329@gmail.com</a><br>
+          Thu–Sun, 10am–6pm
+        </address>
 
         <div class="newsletter">
           <h4>Stay in the Loop</h4>
@@ -704,7 +761,7 @@
         <h4>Boutique</h4>
         <a href="#contact">Book a Fitting</a>
         <a href="#story">Our Story</a>
-        <a href="#testimonials">Real Stories</a>
+        <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
       </div>
       <div>
@@ -714,8 +771,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Atelier Luna. All rights reserved.</span>
-      <span>Placeholder name, copy &amp; stock photos — replace before launch (see <a href="https://github.com/gmoney0112-create/boutique/blob/main/docs/LAUNCH_CHECKLIST.md">LAUNCH_CHECKLIST.md</a>)</span>
+      <span>© 2026 Liz Fashion. All rights reserved.</span>
+      <span>Stock photography — real photos coming soon (see <a href="https://github.com/gmoney0112-create/boutique/blob/main/docs/LAUNCH_CHECKLIST.md">LAUNCH_CHECKLIST.md</a>)</span>
     </div>
   </div>
 </footer>

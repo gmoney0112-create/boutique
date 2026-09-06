@@ -6,178 +6,190 @@ completed in this repo) or needs you (requires your real business
 information, a purchase, an account, a legal review, or a decision only
 you can make — nothing here was fabricated to fill those gaps).
 
-Legend: ✅ done in this repo · ⬜ needs you
+Legend: ✅ done in this repo · 🟡 partially done / needs one more step · ⬜ needs you
+
+## ⚠️ Open questions from the first round of client answers
+
+The business's real identity, hours, pricing, and several policies came in
+from Elizabeth López (owner) on 2026-08-26. Most of it went straight into
+the site. Two things need a follow-up call before they're fully settled —
+flagging here rather than guessing on a live, real business site:
+
+1. **Bridal vs. bridesmaid.** The site's three categories are Bridal,
+   Quinceañera, and Formal & Prom — but the pricing given was for
+   **bridesmaid** dresses ($70–$165), not bridal (wedding) gowns. It's
+   unclear whether Liz Fashion actually carries bridal wedding gowns, or
+   whether "Bridal" should become "Bridesmaid" as a category. The site's
+   category structure was left unchanged pending this answer — only the
+   FAQ pricing item mentions the confirmed bridesmaid/quinceañera numbers,
+   phrased so it doesn't misattribute them to the wrong category.
+2. **Hours vs. "open 24/7."** The client's answers include both "Liz
+   Fashion is open Thursday through Sunday from 10:00 AM to 6:00 PM" and,
+   separately, "we are open 24/7; no appointment is necessary." These
+   contradict each other. The site uses the specific stated hours
+   (Thu–Sun, 10am–6pm) everywhere, since that's the more concrete answer —
+   worth confirming which is actually correct.
+
+Also worth a callback per the client's own note ("call me if you have
+questions"):
+- **Google Business Profile** — client said "we need to discuss," not yet
+  resolved.
+- **Alterations policy** — not answered in this round; still shown as
+  pending on the site (FAQ + Terms).
+- **Contact-form inbox** — client said "forms can be received at Liz
+  Fashion," which was read as the business email already given
+  (`Reynalopez0329@gmail.com`). Worth confirming that's correct before
+  wiring the real Formspree endpoint.
 
 ## Content & copy
 
 1. ⬜ **Real photography.** Still Pexels stock throughout `boutique.html`.
    No image-generation or photography tooling available here. See
-   `ASSETS.md` for exactly which 12 images to replace and how to size them.
-2. ⬜ **Real business name/copy.** "Atelier Luna" / San Antonio are
-   placeholders from the original file. I did **not** invent a replacement
-   business identity — that's your call. I did run an informal web check
-   (not a legal trademark search) for conflicts: no business named exactly
-   "Atelier Luna" turned up, but **"Luna Novias"** (a bridal shop already
-   in San Antonio) and **"Bella Luna Gowns"** (a national custom-gown
-   business) are close enough that a real name-availability/trademark check
-   is worth doing before you commit to this name — see item #44.
-3. ✅ **CTAs wired up.** Every "Book Your Fitting" / lookbook / story CTA
-   now points to the new on-page `#contact` section instead of `href="#"`.
-4. 🟡 **Contact/booking mechanism.** A real contact form now exists on the
-   page (name, email, phone, occasion, message, spam honeypot) — but it
-   doesn't deliver anywhere yet. See item #23.
-11. ⬜ **"Our Story" content.** Footer links to `#story`, which still shows
-    the placeholder Sofia narrative from the original file — no new
-    business narrative was written since I don't know your real story.
-12. ⬜ **Real testimonials.** Left the three generic ones as-is —
-    **deliberately did not fabricate names or quotes** to replace them;
-    that would create fake reviews, which I won't do. Swap in real,
-    consented client quotes when you have them.
-13. ⬜ **Pricing signals.** No real pricing known — not added.
-14. 🟡 **FAQ section.** Added at `#faq` with generic starter answers (booking,
-    timelines, "what to bring"). Two answers are explicitly flagged
-    `[TODO: confirm real policy]` — deposit and alterations — because I
-    don't know your actual policies and didn't want to invent them
-    silently. Read and edit the whole section before publishing.
-15. 🟡 **Privacy Policy & Terms.** Added `privacy.html` and `terms.html` as
-    clearly-labeled templates (visible "TEMPLATE — not yet reviewed"
-    banner) with bracketed placeholders for your legal name, address,
-    and real policies. **Have an attorney review before publishing** —
-    these are starting points, not legal advice.
+   `ASSETS.md` for exactly which images to replace and how to size them.
+2. ✅ **Real business name confirmed: Liz Fashion**, owned by Elizabeth
+   López. Updated everywhere — title, meta tags, JSON-LD, header/footer
+   logo, copyright line, `index.html`, `privacy.html`/`terms.html`,
+   `README.md`. See the open question above re: bridal vs. bridesmaid
+   category naming, which is a separate, still-unresolved question.
+3. ✅ **CTAs wired up.** Every CTA points to a real in-page section.
+4. ✅ **Contact info now real and displayed on the page**: address, phone
+   (click-to-call), email (click-to-email), hours, and a Google Maps embed
+   in the `#contact` section and footer. The submission mechanism itself
+   (Formspree endpoint) is still a placeholder — see item #23.
+11. ✅ **"Our Story" content is now real** — written from Elizabeth's own
+    answer about why she started the business. This replaced the old
+    placeholder "Sofia's Quinceañera" client-feature narrative, which was
+    fictional and was not appropriate to leave live once the business
+    itself became real (see item #12 below for why).
+12. ⬜ **Real testimonials.** The placeholder quotes previously attributed
+    to "a client" were **removed** — leaving fictional quotes attributed
+    to a real, named business would have been exactly the kind of
+    fabricated review we won't publish. The Reviews section now shows an
+    honest "just getting started" note instead, until real reviews exist.
+13. 🟡 **Pricing signals.** Real numbers now in the FAQ: quinceañera gowns
+    from $680 (dress only) or $1,500 (full package), bridesmaid dresses
+    $70–$165. Bridal and formal/prom pricing still unknown — see open
+    question #1 above.
+14. 🟡 **FAQ section**, now mostly real: walk-in policy, deposit
+    ($200 + weekly payment plan), pricing, damage/care liability, and the
+    defective-merchandise return policy (48-hour window + receipt
+    required) are all the client's actual answers. **Alterations is still
+    unanswered** and stays flagged in the FAQ and in `terms.html`.
+15. 🟡 **Privacy Policy & Terms**, now filled in with the real business
+    name, address, phone, and email, and with the real deposit/care/return
+    policies dropped into `terms.html`. The "TEMPLATE — not yet reviewed"
+    banner is **intentionally still there** — the client's own answer was
+    "we'll look for a lawyer," meaning attorney review has not happened
+    yet. Don't remove that banner until it has.
 
 ## Design & UX
 
-16. ✅ **Logo mark.** Added a small inline SVG crescent monogram next to the
-    text wordmark (header + footer) and as the favicon. It's a simple
-    placeholder shape, not a designed brand mark — swap for a real logo
-    when you have one.
-17. ✅ **Favicon.** `favicon.svg` added and linked.
-18. ✅ **Font loading.** Preconnect hints were already present; kept as-is
-    (already reasonably optimized — self-hosting fonts was considered but
-    adds real maintenance overhead for a single-page site with only one
-    remaining Google Fonts request).
-19. ✅ **Responsive images.** Added `srcset`/`sizes` to all 12 images using
-    Pexels' width parameter, so phones don't download desktop-sized files.
-20. ✅ **Removed dev-only "Temp stock photo" labels** that were rendering as
-    visible on-page text. The reminder now lives in `ASSETS.md` and this
-    checklist instead.
-21. ✅ **Mobile navigation.** Added a hamburger toggle + slide-down panel
-    under 860px — previously the nav links just disappeared with no
-    replacement on mobile. Verified working via automated smoke test
-    (`scripts/responsive_check.mjs`).
+16. 🟡 **Logo mark.** Client says "we maintain a custom logo permanently,"
+    meaning a real logo exists — but no file was provided. The site still
+    uses the placeholder crescent-monogram SVG. Send the real logo file
+    (see the questionnaire, section 04) and it can be swapped in directly.
+17. ✅ **Favicon.** Placeholder `favicon.svg` in place until the real logo
+    arrives (see #16).
+18. ✅ **Font loading** — unchanged, already reasonable.
+19. ✅ **Responsive images** — unchanged.
+20. ✅ **Removed dev-only "Temp stock photo" labels.**
+21. ✅ **Mobile navigation** — unchanged, verified working.
 
 ## Functionality
 
-22. ⬜ **Real booking calendar** (Calendly/Acuity/Square Appointments/etc.).
-    Requires picking and setting up a third-party account — not something
-    I can create on your behalf.
-23. 🟡 **Working contact form.** Front-end is built (validation, honeypot
-    spam field, accessible labels) and wired to `#contact`, but the form
-    `action` still points at a placeholder Formspree URL
-    (`https://formspree.io/f/YOUR_FORM_ID`). **To finish:** create a free
-    Formspree (or Netlify Forms) endpoint and swap in the real URL — one
-    line, marked with a `TODO` comment right above the `<form>` tag.
-24. ⬜ **Click-to-call / click-to-email.** No real phone number or email
-    address was provided, so none was added (and none was fabricated).
-25. ⬜ **Map/address.** No real physical address known — not added.
-26. 🟡 **Newsletter signup.** Front-end form added in the footer; `action`
-    is a placeholder needing a real Mailchimp/Klaviyo/etc. endpoint (TODO
-    comment in place).
+22. 🟡 **Booking method.** Client said "you can also choose the booking
+    method" — deferring the decision to us. Given walk-ins are welcome and
+    no appointment is required, the simplest option (no cost, nothing to
+    set up) was kept: the existing contact form, framed as "request a
+    time" rather than "book a fitting." A real calendar tool (Calendly,
+    Acuity, Square Appointments) is still an option if preferred instead —
+    say the word.
+23. 🟡 **Working contact form.** Front end is done; the Formspree `action`
+    URL is still the `YOUR_FORM_ID` placeholder. The TODO comment above
+    the form now names the real target inbox
+    (`Reynalopez0329@gmail.com`) — someone just needs to create the free
+    Formspree endpoint and drop the real URL in.
+24. ✅ **Click-to-call / click-to-email** — real phone and email now shown
+    and linked in the footer and contact section.
+25. ✅ **Map/address** — real address shown, plus an embedded Google Map
+    (no API key needed) and a "Get directions" link, in the `#contact`
+    section.
+26. 🟡 **Newsletter signup.** Client said to omit a newsletter platform for
+    now — front-end form is still there but unwired (`action="#"`);
+    revisit if they want one later.
 
 ## SEO & marketing
 
-27. 🟡 **Structured data (JSON-LD).** Added `ClothingStore` schema in
-    `<head>` with real fields where known (business type, description) and
-    `TODO` placeholders for phone/address, which I don't have.
-28. ⬜ **Google Business Profile.** Requires real-world business
-    verification by the actual owner — can't be done from here.
-29. 🟡 **Social links.** No real handles known, so nothing fake was added.
-    A ready-to-uncomment block is in `boutique.html`'s footer (HTML
-    comment) — add your real URLs and uncomment.
-30. ✅ **`sitemap.xml` and `robots.txt`** added (with a placeholder domain
-    clearly marked `TODO` — see item #32).
-31. 🟡 **Blog/journal.** Not scaffolded as a separate page — this is a
-    bigger content-strategy decision (what to write, how often) that's
-    yours to make; flagging as a future option rather than building an
-    empty shell.
+27. ✅ **Structured data (JSON-LD)** now has real name, phone, email,
+    address, and opening hours.
+28. ⬜ **Google Business Profile.** Client says "we need to discuss" — open
+    item, needs a conversation with the client.
+29. ⬜ **Social links.** Not answered in this round — still a commented-out
+    placeholder block in the footer.
+30. ✅ **`sitemap.xml` and `robots.txt`** — unchanged (still waiting on a
+    real domain, item #32).
+31. 🟡 **Blog/journal** — unchanged, still a future option, not built.
 
 ## Infrastructure
 
-32. ⬜ **Domain purchase.** Requires payment and a decision on the actual
-    name — can't be done autonomously.
-33. ⬜ **HTTPS/SSL.** Depends on the hosting choice below; most modern
-    static hosts (GitHub Pages, Netlify, Vercel) provide this
-    automatically once a domain is attached.
-34. ✅ **Staging/production strategy documented** in `README.md` — this repo
-    already uses a feature-branch → PR → `main` flow, which doubles as a
-    staging/prod split if `main` is what gets deployed.
-35. ✅ **`.gitignore`** added. Skipped a `LICENSE` file on purpose — this is
-    a commercial business site, not open-source software, so a standard
-    OSS license doesn't apply; say the word if you want a copyright/
-    proprietary notice added instead.
-36. ✅ **CI workflow** added at `.github/workflows/ci.yml`: validates all
-    four HTML files (`html-validate`) and checks that every internal link/
-    anchor actually resolves (`scripts/check_internal_links.py`), on every
-    PR and push to `main`. Deliberately scoped to checks that don't depend
-    on external network calls, so it won't flake on Google Fonts/Pexels
-    being slow — a Lighthouse CI job is a reasonable next addition once
-    the site is actually hosted somewhere with a stable URL.
-37. ✅ **Asset storage guidance** written in `ASSETS.md` (folder structure,
-    sizing, Git LFS consideration) — no real photos to store yet.
+32. 🟡 **Domain purchase.** Client said "you can add the domain name
+    yourself" — deferring the choice to us. This still requires an actual
+    purchase (payment), which needs a decision from whoever's paying for
+    it — not something done automatically. Candidate domains worth
+    checking: `lizfashionsa.com`, `shoplizfashion.com`,
+    `lizfashionboutique.com`.
+33. ⬜ **HTTPS/SSL** — automatic once a custom domain is attached to GitHub
+    Pages; not needed for the current `github.io` URL, which already has it.
+34. ✅ **Staging/production strategy** — unchanged.
+35. ✅ **`.gitignore`** — unchanged.
+36. ✅ **CI workflow** — unchanged, green.
+37. ✅ **Asset storage guidance** — unchanged.
 
 ## Testing & QA
 
-38. ✅ **Cross-viewport smoke test.** `scripts/responsive_check.mjs` (uses
-    Playwright/Chromium) checks mobile/tablet/desktop for horizontal
-    overflow, JS errors, and correct mobile-nav behavior — passing as of
-    this change. Note: only Chromium was available in this environment,
-    not real Safari/Firefox engines — worth a manual check in those once
-    hosted.
-39. ✅ **Broken links fixed.** Every internal `href="#"` dead link now
-    points somewhere real (`#contact`, `#story`, `#testimonials`, etc.);
-    verified by `scripts/check_internal_links.py`, which also runs in CI.
-40. ✅ **Spam protection.** Honeypot field added to the contact form
-    (invisible to real users, catches basic bots). A production form
-    provider like Formspree also has its own spam filtering.
-41. ⬜ **Uptime monitoring.** Needs a live URL and your email/account with a
-    service like UptimeRobot — nothing to monitor yet.
+38. ✅ **Cross-viewport smoke test** — re-run after this round of edits, no
+    new issues found.
+39. ✅ **Broken links** — unchanged, still all resolving.
+40. ✅ **Spam protection** — unchanged.
+41. ⬜ **Uptime monitoring** — still open.
 
 ## Business/ops
 
-42. ⬜ **Photography shoot date/owner.** Business decision — yours to set.
-43. ⬜ **Model releases/consent** for any real client story or photo.
-    Real-world legal action involving real people — can't be done here.
-44. 🟡 **Name-availability check.** Did an informal web search (see item
-    #2) — no exact match for "Atelier Luna," but two adjacent names
-    exist. This is **not** a substitute for a formal USPTO/trademark
-    search or an attorney's opinion before you commit to the name.
-45. ⬜ **Domain-based email** (e.g. `hello@yourdomain.com`). Requires
-    owning a domain first (item #32) plus an email host.
+42. ⬜ **Photography shoot date/owner** — still open.
+43. ⬜ **Model releases/consent** — still open; also now moot for the old
+    "Sofia" narrative specifically, since that placeholder was removed
+    rather than kept live under the real business name (see item #12).
+44. 🟡 **Name-availability check** — done informally (item #2 history);
+    not a substitute for a real trademark search, though less urgent now
+    that "Liz Fashion" (not "Atelier Luna") is the confirmed real name —
+    a fresh informal check on "Liz Fashion" specifically hasn't been run.
+45. ⬜ **Domain-based email** (e.g. `hello@lizfashion.com`) — depends on
+    the domain decision in item #32.
 
 ## Accessibility & growth
 
-46. ✅ **Visible focus states** added globally (`:focus-visible`) — nav
-    links and buttons previously had no themed focus indicator.
-47. ✅ **ARIA landmarks** added: skip-to-content link, `<main>` wrapper,
-    `aria-label`s on nav and major sections, accessible form labels.
-48. ✅ **CTA click tracking hooks** added (`data-cta` attributes + a
-    `trackCTA()` function) — currently a safe no-op until an analytics
-    provider (item #9) is wired up, at which point it'll start firing
-    real events with zero extra work.
-49. ✅ **A/B test plan drafted** at `docs/AB_TEST_PLAN.md` (not running —
-    there's no traffic or analytics yet).
-50. ✅ **`prefers-reduced-motion` handling** was already correct and is
-    unchanged; noted in `ASSETS.md`/this doc that any future video/audio
-    should respect it too.
+46. ✅ **Visible focus states** — unchanged.
+47. ✅ **ARIA landmarks** — unchanged.
+48. ✅ **CTA click tracking hooks** — unchanged.
+49. ✅ **A/B test plan** — unchanged.
+50. ✅ **`prefers-reduced-motion` handling** — unchanged.
 
-## The 3 items not itemized above (from the original "next 10")
+## Still pending from the questionnaire
 
-- **Hosting/deployment (#5):** Added `index.html` as a redirect stub so
-  the site works immediately if you enable **GitHub Pages** for this repo
-  (Settings → Pages → Deploy from branch → `main` → `/ (root)`) — that's
-  the one click I can't do for you (no repo-admin API access from here).
-  That gets you a free, HTTPS-secured URL at
-  `https://gmoney0112-create.github.io/boutique/` with zero cost.
-- **Analytics (#9):** Scaffolded in `<head>` as a commented-out snippet
-  with setup notes — needs a real account (Plausible or GA4 suggested).
-- **README (#6):** Rewritten — see `README.md`.
+The client's answer noted sections **03 (Real Content), 04 (Brand), and 05
+(Accounts & Tools)** are still coming. Specifically still needed:
+- One client willing to be featured (with written consent) — see item #12.
+- Logo files (a logo exists per the client, per item #16, just not sent yet).
+- Newsletter platform (client said skip for now — see item #26).
+- Social handles (item #29).
+
+**Analytics (item #9, client left it to our discretion):** no provider
+installed yet — still a commented-out snippet in `<head>`. Google
+Analytics 4 is the zero-cost default (accepts a cookie-consent tradeoff);
+Plausible/Fathom are paid, cookie-free alternatives if that's preferred
+instead. Not decided on your behalf since it's a real ongoing cost vs.
+convenience tradeoff.
+
+**Hosting (item #5): done.** Live at
+https://gmoney0112-create.github.io/boutique/ via GitHub Pages, deployed
+from `main`. Redeploys automatically on every merge.
