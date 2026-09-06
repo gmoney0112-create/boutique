@@ -8,38 +8,32 @@ you can make — nothing here was fabricated to fill those gaps).
 
 Legend: ✅ done in this repo · 🟡 partially done / needs one more step · ⬜ needs you
 
-## ⚠️ Open questions from the first round of client answers
+## ✅ Follow-up answers received (2026-09-06)
 
-The business's real identity, hours, pricing, and several policies came in
-from Elizabeth López (owner) on 2026-08-26. Most of it went straight into
-the site. Two things need a follow-up call before they're fully settled —
-flagging here rather than guessing on a live, real business site:
+Both open questions from the first round are now resolved:
 
-1. **Bridal vs. bridesmaid.** The site's three categories are Bridal,
-   Quinceañera, and Formal & Prom — but the pricing given was for
-   **bridesmaid** dresses ($70–$165), not bridal (wedding) gowns. It's
-   unclear whether Liz Fashion actually carries bridal wedding gowns, or
-   whether "Bridal" should become "Bridesmaid" as a category. The site's
-   category structure was left unchanged pending this answer — only the
-   FAQ pricing item mentions the confirmed bridesmaid/quinceañera numbers,
-   phrased so it doesn't misattribute them to the wrong category.
-2. **Hours vs. "open 24/7."** The client's answers include both "Liz
-   Fashion is open Thursday through Sunday from 10:00 AM to 6:00 PM" and,
-   separately, "we are open 24/7; no appointment is necessary." These
-   contradict each other. The site uses the specific stated hours
-   (Thu–Sun, 10am–6pm) everywhere, since that's the more concrete answer —
-   worth confirming which is actually correct.
+1. **Bridal vs. bridesmaid — both, confirmed.** Liz Fashion carries bridal
+   wedding gowns *and* bridesmaid dresses as two separate lines. The site
+   now has a fourth category section, **Bridesmaid** (`#bridesmaid`), using
+   the confirmed $70–$165 pricing, alongside Bridal, Quinceañera, and
+   Formal & Prom. Nav, footer, title/meta tags, and the contact form's
+   occasion dropdown were all updated to include it. Bridal-specific
+   pricing is still unknown — see item #13.
+2. **Hours — confirmed Thursday through Sunday, 10am–6pm.** The separate
+   "open 24/7" statement from the first round was incorrect; no site
+   changes needed since Thu–Sun was already what's shown everywhere.
 
-Also worth a callback per the client's own note ("call me if you have
-questions"):
+Still open per the client's own note ("call me if you have questions"):
 - **Google Business Profile** — client said "we need to discuss," not yet
   resolved.
-- **Alterations policy** — not answered in this round; still shown as
-  pending on the site (FAQ + Terms).
+- **Alterations policy** — not answered yet; still shown as pending on the
+  site (FAQ + Terms).
 - **Contact-form inbox** — client said "forms can be received at Liz
   Fashion," which was read as the business email already given
   (`Reynalopez0329@gmail.com`). Worth confirming that's correct before
   wiring the real Formspree endpoint.
+- **Bridal pricing** — confirmed as a real product line (see #1 above),
+  but no price range given yet.
 
 ## Content & copy
 
@@ -49,8 +43,8 @@ questions"):
 2. ✅ **Real business name confirmed: Liz Fashion**, owned by Elizabeth
    López. Updated everywhere — title, meta tags, JSON-LD, header/footer
    logo, copyright line, `index.html`, `privacy.html`/`terms.html`,
-   `README.md`. See the open question above re: bridal vs. bridesmaid
-   category naming, which is a separate, still-unresolved question.
+   `README.md`. Bridal vs. bridesmaid is now resolved (see top of this
+   doc) — Liz Fashion carries both, and the site has a category for each.
 3. ✅ **CTAs wired up.** Every CTA points to a real in-page section.
 4. ✅ **Contact info now real and displayed on the page**: address, phone
    (click-to-call), email (click-to-email), hours, and a Google Maps embed
@@ -66,10 +60,11 @@ questions"):
     to a real, named business would have been exactly the kind of
     fabricated review we won't publish. The Reviews section now shows an
     honest "just getting started" note instead, until real reviews exist.
-13. 🟡 **Pricing signals.** Real numbers now in the FAQ: quinceañera gowns
-    from $680 (dress only) or $1,500 (full package), bridesmaid dresses
-    $70–$165. Bridal and formal/prom pricing still unknown — see open
-    question #1 above.
+13. 🟡 **Pricing signals.** Real numbers now in the FAQ and the new
+    Bridesmaid category section: quinceañera gowns from $680 (dress only)
+    or $1,500 (full package), bridesmaid dresses $70–$165. Bridal and
+    formal/prom pricing still unknown — both are confirmed real product
+    lines now, just without a price range yet.
 14. 🟡 **FAQ section**, now mostly real: walk-in policy, deposit
     ($200 + weekly payment plan), pricing, damage/care liability, and the
     defective-merchandise return policy (48-hour window + receipt

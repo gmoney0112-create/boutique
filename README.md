@@ -1,8 +1,8 @@
 # Liz Fashion — boutique site
 
-A single-page marketing site for Liz Fashion, a quinceañera, bridal &
-formal boutique in San Antonio, TX. Static HTML/CSS/JS — no build step,
-no framework, no dependencies to install to run it.
+A single-page marketing site for Liz Fashion, a quinceañera, bridal,
+bridesmaid & formal boutique in San Antonio, TX. Static HTML/CSS/JS — no
+build step, no framework, no dependencies to install to run it.
 
 Live preview: https://gmoney0112-create.github.io/boutique/ (via GitHub
 Pages, deployed from `main`).
