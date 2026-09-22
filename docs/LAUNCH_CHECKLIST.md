@@ -8,6 +8,34 @@ you can make — nothing here was fabricated to fill those gaps).
 
 Legend: ✅ done in this repo · 🟡 partially done / needs one more step · ⬜ needs you
 
+## ✅ Domain purchased and connected (2026-09-22)
+
+- **shoplizfashion.com** purchased via IONOS and connected: DNS A records
+  at the apex point to GitHub Pages, `www` is CNAME'd to
+  `gmoney0112-create.github.io`, and a `CNAME` file in this repo pins the
+  custom domain. Live at **https://shoplizfashion.com**.
+- Every `YOUR-DOMAIN-HERE.com` placeholder (canonical link, OG tags,
+  JSON-LD, analytics snippet comment, `sitemap.xml`, `robots.txt`,
+  `privacy.html`/`terms.html`) replaced with the real domain — this
+  resolves items #32 and #33.
+- **Google Business Profile — found and confirmed real**, resolving the
+  "need to discuss" item: phone, address, and hours on the listing match
+  what Elizabeth gave us exactly (32 reviews, 5.0 stars, reviewers mention
+  "Liz and Jose"). Her listed website is `facebook.liz.fashion`, a
+  stronger confirmation of her real Facebook page than the earlier
+  informal search — see item #29.
+- **Photos on that listing were deliberately NOT scraped.** Google's own
+  photo viewer displays "Images may be subject to copyright" on the
+  gallery, and at least one photo was tagged as shot on a customer's
+  phone — there's no reliable way to tell which of the 220+ photos are
+  Elizabeth's own uploads versus customer-contributed ones. Pulling and
+  republishing customer photos onto the official site without knowing
+  who took them is a real rights risk, not just caution for its own sake.
+  **The clean fix:** Elizabeth can log into Google Business Profile
+  Manager (business.google.com), filter photos to "Added by you," and
+  send those over directly — that's unambiguously hers to reuse. See
+  item #1.
+
 ## ✅ Follow-up answers received (2026-09-06)
 
 Both open questions from the first round are now resolved:
@@ -38,8 +66,12 @@ Still open per the client's own note ("call me if you have questions"):
 ## Content & copy
 
 1. ⬜ **Real photography.** Still Pexels stock throughout `boutique.html`.
-   No image-generation or photography tooling available here. See
-   `ASSETS.md` for exactly which images to replace and how to size them.
+   Found Elizabeth's real Google Business Profile (220+ photos) but
+   deliberately did not scrape from it — Google flags the gallery as
+   possibly copyrighted, and owner- vs. customer-uploaded photos aren't
+   distinguishable from the outside. See the domain/GBP note at the top
+   of this doc, and `ASSETS.md` for exactly which images to replace and
+   how to size them once real ones arrive.
 2. ✅ **Real business name confirmed: Liz Fashion**, owned by Elizabeth
    López. Updated everywhere — title, meta tags, JSON-LD, header/footer
    logo, copyright line, `index.html`, `privacy.html`/`terms.html`,
@@ -117,24 +149,26 @@ Still open per the client's own note ("call me if you have questions"):
 
 27. ✅ **Structured data (JSON-LD)** now has real name, phone, email,
     address, and opening hours.
-28. ⬜ **Google Business Profile.** Client says "we need to discuss" — open
-    item, needs a conversation with the client.
-29. ⬜ **Social links.** Not answered in this round — still a commented-out
-    placeholder block in the footer.
-30. ✅ **`sitemap.xml` and `robots.txt`** — unchanged (still waiting on a
-    real domain, item #32).
+28. ✅ **Google Business Profile — found and confirmed real** (see the note
+    at the top of this doc). Not yet claimed/linked to any of our
+    accounts, but it exists, is active, and clearly belongs to Elizabeth.
+29. 🟡 **Social links.** Facebook link added to the footer
+    (`facebook.liz.fashion`, confirmed real via her GBP listing).
+    Instagram still needs direct confirmation before adding (see the
+    earlier informal-search caveat — several similarly-named accounts
+    exist).
+30. ✅ **`sitemap.xml` and `robots.txt`** — now point at the real domain,
+    shoplizfashion.com.
 31. 🟡 **Blog/journal** — unchanged, still a future option, not built.
 
 ## Infrastructure
 
-32. 🟡 **Domain purchase.** Client said "you can add the domain name
-    yourself" — deferring the choice to us. This still requires an actual
-    purchase (payment), which needs a decision from whoever's paying for
-    it — not something done automatically. Candidate domains worth
-    checking: `lizfashionsa.com`, `shoplizfashion.com`,
-    `lizfashionboutique.com`.
-33. ⬜ **HTTPS/SSL** — automatic once a custom domain is attached to GitHub
-    Pages; not needed for the current `github.io` URL, which already has it.
+32. ✅ **Domain purchased: shoplizfashion.com** (via IONOS) and connected
+    to GitHub Pages — DNS records set, `CNAME` file added to the repo,
+    every placeholder domain reference replaced.
+33. 🟡 **HTTPS/SSL** — automatic once DNS propagates and "Enforce HTTPS"
+    is turned on in repo Settings → Pages; that toggle is a manual step
+    on GitHub's side once the domain is verified.
 34. ✅ **Staging/production strategy** — unchanged.
 35. ✅ **`.gitignore`** — unchanged.
 36. ✅ **CI workflow** — unchanged, green.
@@ -158,8 +192,9 @@ Still open per the client's own note ("call me if you have questions"):
     not a substitute for a real trademark search, though less urgent now
     that "Liz Fashion" (not "Atelier Luna") is the confirmed real name —
     a fresh informal check on "Liz Fashion" specifically hasn't been run.
-45. ⬜ **Domain-based email** (e.g. `hello@lizfashion.com`) — depends on
-    the domain decision in item #32.
+45. ⬜ **Domain-based email** (e.g. `hello@shoplizfashion.com`) — the
+    domain now exists (item #32), just needs an email host chosen (IONOS
+    likely offers this directly) and mailboxes set up.
 
 ## Accessibility & growth
 
