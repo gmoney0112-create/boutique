@@ -14,12 +14,13 @@
 <meta property="og:site_name" content="Liz Fashion">
 <meta property="og:title" content="Liz Fashion — Bridal, Quinceañera, Bridesmaid & Formal Boutique">
 <meta property="og:description" content="Walk in and find your dress, or let us know what you're looking for — quinceañera, bridal, bridesmaid, and formal wear in San Antonio, TX.">
-<meta property="og:image" content="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:image" content="https://shoplizfashion.com/logo.png">
 <meta property="og:url" content="https://shoplizfashion.com/boutique.html">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Favicon (see favicon.svg — simple crescent monogram, swap for a real logo mark when ready) -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Favicon (real logo, provided by the client) -->
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,7 +155,7 @@
     display:inline-flex; align-items:center; gap:8px;
     font-family:'Fraunces', serif; font-size:1.3rem; letter-spacing:0.02em;
   }
-  .logo svg{ width:20px; height:20px; flex:none; }
+  .logo img{ height:52px; width:auto; display:block; }
   .nav-toggle{
     display:none; background:none; border:none; cursor:pointer; padding:8px;
     color:var(--ink);
@@ -344,6 +345,7 @@
   .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
   footer h4{ font-family:'Fraunces', serif; color:var(--ivory); font-size:1.05rem; margin-bottom:16px; }
   footer .logo{ color:var(--ivory); margin-bottom:14px; }
+  .footer-logo img{ height:64px; width:auto; border-radius:6px; }
   footer a{ display:block; font-size:0.9rem; margin-bottom:10px; color:rgba(239,232,221,0.7); }
   footer a:hover{ color:var(--gold); }
   .footer-blurb{ max-width:280px; font-size:0.88rem; }
@@ -405,8 +407,7 @@
 <header>
   <nav aria-label="Primary">
     <a href="#top" class="logo">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
-      Liz Fashion
+      <img src="logo.png" width="300" height="300" alt="Liz Fashion Store">
     </a>
     <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -735,9 +736,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="logo">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
-          Liz Fashion
+        <div class="logo footer-logo">
+          <img src="logo.png" width="300" height="300" alt="Liz Fashion Store">
         </div>
         <p class="footer-blurb">Quinceañera, bridal, bridesmaid, and formal wear in San Antonio. Walk-ins welcome.</p>
         <address class="footer-contact">
