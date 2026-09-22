@@ -4,8 +4,9 @@ A single-page marketing site for Liz Fashion, a quinceañera, bridal,
 bridesmaid & formal boutique in San Antonio, TX. Static HTML/CSS/JS — no
 build step, no framework, no dependencies to install to run it.
 
-Live preview: https://gmoney0112-create.github.io/boutique/ (via GitHub
-Pages, deployed from `main`).
+Live at **https://shoplizfashion.com** (custom domain, purchased via IONOS)
+— also reachable at https://gmoney0112-create.github.io/boutique/. Both
+serve the same GitHub Pages deployment from `main`.
 
 **⚠️ Not launch-ready yet.** Business identity, hours, pricing, and
 policies are real as of the latest client questionnaire response — but
@@ -22,7 +23,8 @@ it lists exactly what's real, what's a placeholder, and what's left to do.
 | `index.html` | Redirects to `boutique.html`, so hosts that default to `index.html` (GitHub Pages, most static hosts) work with no extra config. |
 | `privacy.html`, `terms.html` | Legal page templates — **not reviewed, not for production use as-is.** See the banner on each page. |
 | `favicon.svg` | Placeholder favicon (simple crescent monogram). |
-| `sitemap.xml`, `robots.txt` | Basic SEO scaffolding — contain a placeholder domain, see `docs/LAUNCH_CHECKLIST.md` #32. |
+| `sitemap.xml`, `robots.txt` | Basic SEO scaffolding, pointing at shoplizfashion.com. |
+| `CNAME` | Tells GitHub Pages to serve this site at shoplizfashion.com. |
 | `ASSETS.md` | How/where to add real photography before launch. |
 | `docs/LAUNCH_CHECKLIST.md` | The master pre-launch checklist — start here. |
 | `docs/AB_TEST_PLAN.md` | A draft plan for testing hero copy/CTAs once there's real traffic. |
@@ -65,15 +67,10 @@ in CI on every pull request (`.github/workflows/ci.yml`).
 
 ## Deploying
 
-Already live via GitHub Pages, deployed from `main`:
-**https://gmoney0112-create.github.io/boutique/**
-
-Any merge to `main` redeploys automatically within a minute or two.
-
-Once there's a real custom domain (client has deferred this choice to us —
-see `docs/LAUNCH_CHECKLIST.md` #32), add it under Settings → Pages and
-update `boutique.html`'s canonical/OG tags, `sitemap.xml`, and
-`robots.txt` (all currently have a `YOUR-DOMAIN-HERE.com` placeholder —
-search for that string to find every spot).
+Live via GitHub Pages, deployed from `main`, at the custom domain
+**shoplizfashion.com** (DNS: A records at the apex pointing at GitHub
+Pages' IPs, `www` CNAME'd to `gmoney0112-create.github.io`, `CNAME` file
+in this repo pins the custom domain). Any merge to `main` redeploys
+automatically within a minute or two.
 
 See `docs/LAUNCH_CHECKLIST.md` for everything else before this goes live.
