@@ -162,14 +162,18 @@ Still open per the client's own note ("call me if you have questions"):
 
 ## Design & UX
 
-16. ✅ **Logo mark — real logo now live.** Found as `liz_owner_166.jpg`
-    inside the same GBP photo export (the very last file, easy to miss —
-    it's a JPG, not a PNG, which is why an earlier PNG-only search for it
-    came up empty). Exported into `assets/logo-*.png` and now used in the
-    header, footer, and favicon.
-17. ✅ **Favicon.** Real logo, exported at 32/48/180px
-    (`assets/favicon-*.png`) — replaces the old placeholder
-    `favicon.svg`, which has been deleted.
+16. ✅ **Logo mark — real logo now live.** Two sessions tracked this down
+    in parallel: found as `liz_owner_166.jpg` inside the same GBP photo
+    export (the very last file, easy to miss — it's a JPG, not a PNG,
+    which is why an earlier PNG-only search for it came up empty), and
+    separately confirmed to match the `@liz__.fashion` Instagram bio name
+    — good corroboration that account really is hers (see item #29).
+    Resized from the client's 1254×1254 original to `logo.png` (300×300)
+    and now appears in the header, footer, and as the social-share
+    (`og:image`) preview, replacing the placeholder crescent SVG.
+17. ✅ **Favicon.** Regenerated from the real logo — `favicon-32.png` and
+    `apple-touch-icon.png`, replacing the placeholder crescent SVG
+    (which has been deleted).
 18. ✅ **Font loading** — unchanged, already reasonable.
 19. ✅ **Responsive images** — unchanged.
 20. ✅ **Removed dev-only "Temp stock photo" labels.**
@@ -205,11 +209,11 @@ Still open per the client's own note ("call me if you have questions"):
 28. ✅ **Google Business Profile — found and confirmed real** (see the note
     at the top of this doc). Not yet claimed/linked to any of our
     accounts, but it exists, is active, and clearly belongs to Elizabeth.
-29. 🟡 **Social links.** Facebook link added to the footer
-    (`facebook.liz.fashion`, confirmed real via her GBP listing).
-    Instagram still needs direct confirmation before adding (see the
-    earlier informal-search caveat — several similarly-named accounts
-    exist).
+29. ✅ **Social links.** Both now in the footer: Facebook
+    (`facebook.liz.fashion`, confirmed via her GBP listing) and Instagram
+    (`@liz__.fashion`, confirmed because its bio graphic is the exact same
+    real logo file received directly from the client — resolves the
+    earlier informal-search caveat about similarly-named accounts).
 30. ✅ **`sitemap.xml` and `robots.txt`** — now point at the real domain,
     shoplizfashion.com.
 31. 🟡 **Blog/journal** — unchanged, still a future option, not built.
@@ -262,7 +266,6 @@ Still open per the client's own note ("call me if you have questions"):
 The client's answer noted sections **03 (Real Content), 04 (Brand), and 05
 (Accounts & Tools)** are still coming. Specifically still needed:
 - One client willing to be featured (with written consent) — see item #12.
-- Logo files (a logo exists per the client, per item #16, just not sent yet).
 - Newsletter platform (client said skip for now — see item #26).
 - Social handles (item #29).
 
@@ -273,6 +276,8 @@ Plausible/Fathom are paid, cookie-free alternatives if that's preferred
 instead. Not decided on your behalf since it's a real ongoing cost vs.
 convenience tradeoff.
 
-**Hosting (item #5): done.** Live at
-https://gmoney0112-create.github.io/boutique/ via GitHub Pages, deployed
-from `main`. Redeploys automatically on every merge.
+**Hosting (item #5): done.** Live at **https://shoplizfashion.com** (custom
+domain, see the domain note at the top of this doc) via GitHub Pages,
+deployed from `main`. Also still reachable at
+https://gmoney0112-create.github.io/boutique/. Redeploys automatically on
+every merge.

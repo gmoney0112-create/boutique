@@ -14,14 +14,13 @@
 <meta property="og:site_name" content="Liz Fashion">
 <meta property="og:title" content="Liz Fashion — Bridal, Quinceañera, Formal & Fragrance Boutique">
 <meta property="og:description" content="Quinceañera, bridal, bridesmaid, and formal wear, plus fragrance, shoes, and accessories — all in one San Antonio boutique.">
-<meta property="og:image" content="https://images.pexels.com/photos/3984878/pexels-photo-3984878.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:image" content="https://shoplizfashion.com/logo.png">
 <meta property="og:url" content="https://shoplizfashion.com/boutique.html">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Favicon: real Liz Fashion logo mark -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<!-- Favicon (real logo, provided by the client) -->
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,7 +155,7 @@
     display:inline-flex; align-items:center; gap:8px;
     font-family:'Fraunces', serif; font-size:1.3rem; letter-spacing:0.02em;
   }
-  .logo img{ width:44px; height:44px; flex:none; border-radius:50%; }
+  .logo img{ height:52px; width:auto; display:block; }
   .nav-toggle{
     display:none; background:none; border:none; cursor:pointer; padding:8px;
     color:var(--ink);
@@ -346,6 +345,7 @@
   .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
   footer h4{ font-family:'Fraunces', serif; color:var(--ivory); font-size:1.05rem; margin-bottom:16px; }
   footer .logo{ color:var(--ivory); margin-bottom:14px; }
+  .footer-logo img{ height:64px; width:auto; border-radius:6px; }
   footer a{ display:block; font-size:0.9rem; margin-bottom:10px; color:rgba(239,232,221,0.7); }
   footer a:hover{ color:var(--gold); }
   .footer-blurb{ max-width:280px; font-size:0.88rem; }
@@ -407,7 +407,7 @@
 <header>
   <nav aria-label="Primary">
     <a href="#top" class="logo">
-      <img src="assets/logo-80.png" srcset="assets/logo-80.png 80w, assets/logo-160.png 160w" sizes="44px" width="80" height="80" alt="Liz Fashion">
+      <img src="logo.png" width="300" height="300" alt="Liz Fashion Store">
     </a>
     <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -776,8 +776,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="logo">
-          <img src="assets/logo-80.png" srcset="assets/logo-80.png 80w, assets/logo-160.png 160w" sizes="44px" width="80" height="80" alt="Liz Fashion">
+        <div class="logo footer-logo">
+          <img src="logo.png" width="300" height="300" alt="Liz Fashion Store">
         </div>
         <p class="footer-blurb">Quinceañera, bridal, bridesmaid, and formal wear, plus fragrance and more, in San Antonio. Walk-ins welcome.</p>
         <address class="footer-contact">
@@ -801,11 +801,12 @@
 
         <!--
           Facebook confirmed via Elizabeth's Google Business Profile listing.
-          Instagram intentionally left out — several similarly-named accounts
-          exist and this one hasn't been confirmed as hers (LAUNCH_CHECKLIST #29).
+          Instagram (@liz__.fashion) confirmed via the real logo, which
+          matches its bio graphic exactly — see LAUNCH_CHECKLIST #29.
         -->
         <div class="social-links">
           <a href="https://facebook.liz.fashion/" aria-label="Liz Fashion on Facebook" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/liz__.fashion/" aria-label="Liz Fashion on Instagram" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
       <div>
