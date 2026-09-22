@@ -8,6 +8,60 @@ you can make — nothing here was fabricated to fill those gaps).
 
 Legend: ✅ done in this repo · 🟡 partially done / needs one more step · ⬜ needs you
 
+## ✅ HTTPS live, real photos + reviews added, scope expanded (2026-09-22, later)
+
+- **HTTPS certificate issued and enforced.** shoplizfashion.com now serves
+  over HTTPS by default (HTTP redirects automatically); "Enforce HTTPS" is
+  on in the repo's Pages settings. Item #33 fully done.
+- **Site scope expanded to a general boutique.** Real photos revealed Liz
+  Fashion sells far more than dresses — heavily fragrance/perfume, plus
+  shoes, handbags, and everyday clothing. Per your direction, added a
+  fourth-plus category, **Fragrance & More** (`#fragrance`), with real
+  photography and copy reflecting the actual product mix ("A boutique,
+  not a dress shop with one thing"). Nav, footer, meta tags, hero copy,
+  and the contact form's occasion dropdown all updated to match.
+- **Real photography added** (item #1, now partially done): sourced from
+  166 photos Elizabeth's team exported from the Google Business Profile,
+  specifically the `owner`-only subset (a sibling `customer` folder
+  existed and was deliberately excluded — see reasoning below). Used for:
+  - Quinceañera category: real red sequin gown
+  - Formal & Prom category: real black rhinestone dress
+  - Bridesmaid category: real floral maxi dress
+  - New Fragrance category: real shelf photo
+  - Lookbook: 2 of 6 images swapped to real (navy rhinestone dress,
+    a fragrance bottle)
+  - All resized/compressed into responsive `srcset` variants (500/1000/1600w
+    JPEGs) before committing — originals ran up to 8MB each.
+  - **Bridal category still on stock photography** — nothing in the
+    reviewed sample read clearly as a wedding gown; needs a dedicated
+    real photo still.
+  - Two more real photos (a brown one-shoulder dress, a second fragrance
+    shelf shot) are sitting in `assets/photos/` unused, ready for a future
+    lookbook/story update.
+  - **On using the "owner" photos at all**: this is a change from the
+    earlier position (declining to scrape GBP photos directly). What
+    changed: the photos were provided directly as files by the client's
+    team, not scraped by us; the export deliberately separated `owner`
+    from `customer` folders (mirroring Google's own uploader attribution)
+    and only the `owner` set was shared; and a consistent phone-camera
+    watermark ("shot on motorola edge 2024") appeared across a dated
+    sequence of clear inventory-cataloging photos spanning July–December
+    2025, consistent with one person systematically photographing stock
+    rather than a scattered customer snapshot. The `customer` folder was
+    not touched.
+- **Real reviews added** (item #12, now done): 6 of the 32 real Google
+  reviews (5.0 stars average, verified via a review-audit spreadsheet the
+  client's team pulled, cross-checked against the live listing) now
+  appear in the Reviews section, with real reviewer names as posted
+  publicly, plus a link to the full listing. Public Google reviews are
+  standard, low-risk content for a business to showcase on its own site
+  (unlike photos, there's no ambiguity about who owns text you posted
+  publicly yourself) — this is different from the placeholder-quote
+  fabrication we've avoided throughout.
+- **Logo file still not located.** Not present in the 166-photo GBP
+  export or the Downloads folder it was expected in. Site still uses the
+  placeholder crescent-moon mark. Item #16 still open.
+
 ## ✅ Domain purchased and connected (2026-09-22)
 
 - **shoplizfashion.com** purchased via IONOS and connected: DNS A records
@@ -65,13 +119,12 @@ Still open per the client's own note ("call me if you have questions"):
 
 ## Content & copy
 
-1. ⬜ **Real photography.** Still Pexels stock throughout `boutique.html`.
-   Found Elizabeth's real Google Business Profile (220+ photos) but
-   deliberately did not scrape from it — Google flags the gallery as
-   possibly copyrighted, and owner- vs. customer-uploaded photos aren't
-   distinguishable from the outside. See the domain/GBP note at the top
-   of this doc, and `ASSETS.md` for exactly which images to replace and
-   how to size them once real ones arrive.
+1. 🟡 **Real photography.** Quinceañera, Formal, Bridesmaid, and the new
+   Fragrance category now use real photos, provided directly as files
+   (not scraped) and confirmed as owner-sourced — see the top of this doc
+   for the full reasoning. **Bridal category still on Pexels stock** —
+   no clear wedding-gown photo turned up in what was reviewed. See
+   `ASSETS.md` for sizing/format guidance for anything added later.
 2. ✅ **Real business name confirmed: Liz Fashion**, owned by Elizabeth
    López. Updated everywhere — title, meta tags, JSON-LD, header/footer
    logo, copyright line, `index.html`, `privacy.html`/`terms.html`,
@@ -87,11 +140,9 @@ Still open per the client's own note ("call me if you have questions"):
     placeholder "Sofia's Quinceañera" client-feature narrative, which was
     fictional and was not appropriate to leave live once the business
     itself became real (see item #12 below for why).
-12. ⬜ **Real testimonials.** The placeholder quotes previously attributed
-    to "a client" were **removed** — leaving fictional quotes attributed
-    to a real, named business would have been exactly the kind of
-    fabricated review we won't publish. The Reviews section now shows an
-    honest "just getting started" note instead, until real reviews exist.
+12. ✅ **Real testimonials.** 6 of the 32 real, verified Google reviews
+    now appear in the Reviews section with real names and a link to the
+    full listing — see the top of this doc for sourcing detail.
 13. 🟡 **Pricing signals.** Real numbers now in the FAQ and the new
     Bridesmaid category section: quinceañera gowns from $680 (dress only)
     or $1,500 (full package), bridesmaid dresses $70–$165. Bridal and
