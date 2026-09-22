@@ -162,12 +162,14 @@ Still open per the client's own note ("call me if you have questions"):
 
 ## Design & UX
 
-16. 🟡 **Logo mark.** Client says "we maintain a custom logo permanently,"
-    meaning a real logo exists — but no file was provided. The site still
-    uses the placeholder crescent-monogram SVG. Send the real logo file
-    (see the questionnaire, section 04) and it can be swapped in directly.
-17. ✅ **Favicon.** Placeholder `favicon.svg` in place until the real logo
-    arrives (see #16).
+16. ✅ **Logo mark — real logo now live.** Found as `liz_owner_166.jpg`
+    inside the same GBP photo export (the very last file, easy to miss —
+    it's a JPG, not a PNG, which is why an earlier PNG-only search for it
+    came up empty). Exported into `assets/logo-*.png` and now used in the
+    header, footer, and favicon.
+17. ✅ **Favicon.** Real logo, exported at 32/48/180px
+    (`assets/favicon-*.png`) — replaces the old placeholder
+    `favicon.svg`, which has been deleted.
 18. ✅ **Font loading** — unchanged, already reasonable.
 19. ✅ **Responsive images** — unchanged.
 20. ✅ **Removed dev-only "Temp stock photo" labels.**

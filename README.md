@@ -22,7 +22,7 @@ it lists exactly what's real, what's a placeholder, and what's left to do.
 | `boutique.html` | The site. Everything — markup, CSS, JS — lives in this one file. |
 | `index.html` | Redirects to `boutique.html`, so hosts that default to `index.html` (GitHub Pages, most static hosts) work with no extra config. |
 | `privacy.html`, `terms.html` | Legal page templates — **not reviewed, not for production use as-is.** See the banner on each page. |
-| `favicon.svg` | Placeholder favicon (simple crescent monogram). |
+| `assets/favicon-*.png`, `assets/logo-*.png` | The real Liz Fashion logo, exported at several sizes for the favicon and the header/footer mark. |
 | `sitemap.xml`, `robots.txt` | Basic SEO scaffolding, pointing at shoplizfashion.com. |
 | `CNAME` | Tells GitHub Pages to serve this site at shoplizfashion.com. |
 | `ASSETS.md` | How/where to add real photography before launch. |

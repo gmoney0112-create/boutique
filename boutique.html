@@ -18,8 +18,10 @@
 <meta property="og:url" content="https://shoplizfashion.com/boutique.html">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Favicon (see favicon.svg — simple crescent monogram, swap for a real logo mark when ready) -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Favicon: real Liz Fashion logo mark -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,7 +156,7 @@
     display:inline-flex; align-items:center; gap:8px;
     font-family:'Fraunces', serif; font-size:1.3rem; letter-spacing:0.02em;
   }
-  .logo svg{ width:20px; height:20px; flex:none; }
+  .logo img{ width:44px; height:44px; flex:none; border-radius:50%; }
   .nav-toggle{
     display:none; background:none; border:none; cursor:pointer; padding:8px;
     color:var(--ink);
@@ -405,8 +407,7 @@
 <header>
   <nav aria-label="Primary">
     <a href="#top" class="logo">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
-      Liz Fashion
+      <img src="assets/logo-80.png" srcset="assets/logo-80.png 80w, assets/logo-160.png 160w" sizes="44px" width="80" height="80" alt="Liz Fashion">
     </a>
     <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -776,8 +777,7 @@
     <div class="footer-grid">
       <div>
         <div class="logo">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 2.5a9.5 9.5 0 1 0 8 15.03A8 8 0 0 1 13.5 2.5z"/></svg>
-          Liz Fashion
+          <img src="assets/logo-80.png" srcset="assets/logo-80.png 80w, assets/logo-160.png 160w" sizes="44px" width="80" height="80" alt="Liz Fashion">
         </div>
         <p class="footer-blurb">Quinceañera, bridal, bridesmaid, and formal wear, plus fragrance and more, in San Antonio. Walk-ins welcome.</p>
         <address class="footer-contact">
