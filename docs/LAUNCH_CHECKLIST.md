@@ -111,12 +111,14 @@ Still open per the client's own note ("call me if you have questions"):
 
 ## Design & UX
 
-16. 🟡 **Logo mark.** Client says "we maintain a custom logo permanently,"
-    meaning a real logo exists — but no file was provided. The site still
-    uses the placeholder crescent-monogram SVG. Send the real logo file
-    (see the questionnaire, section 04) and it can be swapped in directly.
-17. ✅ **Favicon.** Placeholder `favicon.svg` in place until the real logo
-    arrives (see #16).
+16. ✅ **Logo mark — received and installed.** The real "Liz Fashion Store"
+    logo (matches the `@liz__.fashion` Instagram bio name, corroborating
+    that account is really hers) now appears in the header, footer, and as
+    the social-share (`og:image`) preview, replacing the placeholder
+    crescent SVG. Saved as `logo.png` (300×300, resized from the client's
+    1254×1254 original).
+17. ✅ **Favicon.** Regenerated from the real logo — `favicon-32.png` and
+    `apple-touch-icon.png`, replacing the placeholder crescent SVG.
 18. ✅ **Font loading** — unchanged, already reasonable.
 19. ✅ **Responsive images** — unchanged.
 20. ✅ **Removed dev-only "Temp stock photo" labels.**
@@ -209,7 +211,6 @@ Still open per the client's own note ("call me if you have questions"):
 The client's answer noted sections **03 (Real Content), 04 (Brand), and 05
 (Accounts & Tools)** are still coming. Specifically still needed:
 - One client willing to be featured (with written consent) — see item #12.
-- Logo files (a logo exists per the client, per item #16, just not sent yet).
 - Newsletter platform (client said skip for now — see item #26).
 - Social handles (item #29).
 
@@ -220,6 +221,8 @@ Plausible/Fathom are paid, cookie-free alternatives if that's preferred
 instead. Not decided on your behalf since it's a real ongoing cost vs.
 convenience tradeoff.
 
-**Hosting (item #5): done.** Live at
-https://gmoney0112-create.github.io/boutique/ via GitHub Pages, deployed
-from `main`. Redeploys automatically on every merge.
+**Hosting (item #5): done.** Live at **https://shoplizfashion.com** (custom
+domain, see the domain note at the top of this doc) via GitHub Pages,
+deployed from `main`. Also still reachable at
+https://gmoney0112-create.github.io/boutique/. Redeploys automatically on
+every merge.

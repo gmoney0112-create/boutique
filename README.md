@@ -8,10 +8,9 @@ Live at **https://shoplizfashion.com** (custom domain, purchased via IONOS)
 — also reachable at https://gmoney0112-create.github.io/boutique/. Both
 serve the same GitHub Pages deployment from `main`.
 
-**⚠️ Not launch-ready yet.** Business identity, hours, pricing, and
-policies are real as of the latest client questionnaire response — but
-stock photography, real testimonials, brand assets, and several accounts
-(domain, booking, analytics) are still open. Read
+**⚠️ Not launch-ready yet.** Business identity, hours, pricing, policies,
+domain, and the real logo are all in place — but stock photography, real
+testimonials, and a few accounts (booking, analytics) are still open. Read
 [`docs/LAUNCH_CHECKLIST.md`](docs/LAUNCH_CHECKLIST.md) before publishing —
 it lists exactly what's real, what's a placeholder, and what's left to do.
 
@@ -22,7 +21,8 @@ it lists exactly what's real, what's a placeholder, and what's left to do.
 | `boutique.html` | The site. Everything — markup, CSS, JS — lives in this one file. |
 | `index.html` | Redirects to `boutique.html`, so hosts that default to `index.html` (GitHub Pages, most static hosts) work with no extra config. |
 | `privacy.html`, `terms.html` | Legal page templates — **not reviewed, not for production use as-is.** See the banner on each page. |
-| `favicon.svg` | Placeholder favicon (simple crescent monogram). |
+| `logo.png` | The real Liz Fashion Store logo, provided by the client. Used in the header, footer, and as the social-share image. |
+| `favicon-32.png`, `apple-touch-icon.png` | Favicons generated from the real logo. |
 | `sitemap.xml`, `robots.txt` | Basic SEO scaffolding, pointing at shoplizfashion.com. |
 | `CNAME` | Tells GitHub Pages to serve this site at shoplizfashion.com. |
 | `ASSETS.md` | How/where to add real photography before launch. |
