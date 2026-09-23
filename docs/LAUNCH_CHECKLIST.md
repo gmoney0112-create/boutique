@@ -134,7 +134,7 @@ Still open per the client's own note ("call me if you have questions"):
 4. ✅ **Contact info now real and displayed on the page**: address, phone
    (click-to-call), email (click-to-email), hours, and a Google Maps embed
    in the `#contact` section and footer. The submission mechanism itself
-   (Formspree endpoint) is still a placeholder — see item #23.
+   (Formspree endpoint) is now wired up — see item #23.
 11. ✅ **"Our Story" content is now real** — written from Elizabeth's own
     answer about why she started the business. This replaced the old
     placeholder "Sofia's Quinceañera" client-feature narrative, which was
@@ -188,11 +188,12 @@ Still open per the client's own note ("call me if you have questions"):
     time" rather than "book a fitting." A real calendar tool (Calendly,
     Acuity, Square Appointments) is still an option if preferred instead —
     say the word.
-23. 🟡 **Working contact form.** Front end is done; the Formspree `action`
-    URL is still the `YOUR_FORM_ID` placeholder. The TODO comment above
-    the form now names the real target inbox
-    (`Reynalopez0329@gmail.com`) — someone just needs to create the free
-    Formspree endpoint and drop the real URL in.
+23. ✅ **Working contact form.** Wired to a real Formspree endpoint
+    (`https://formspree.io/f/xyezjbee`). Submits via AJAX (`@formspree/ajax`
+    CDN script) so visitors see an inline success/error message without
+    leaving the page; falls back to a normal POST (redirects to Formspree)
+    if that script fails to load. Confirm in the Formspree dashboard that
+    this form's notification email is set to `Reynalopez0329@gmail.com`.
 24. ✅ **Click-to-call / click-to-email** — real phone and email now shown
     and linked in the footer and contact section.
 25. ✅ **Map/address** — real address shown, plus an embedded Google Map
