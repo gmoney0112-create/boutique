@@ -8,6 +8,30 @@ you can make — nothing here was fabricated to fill those gaps).
 
 Legend: ✅ done in this repo · 🟡 partially done / needs one more step · ⬜ needs you
 
+## ✅ Homepage videos added, fragrance photos swapped out (2026-09-23)
+
+- **4 real videos added** to a new "See It In Motion" section (`#videos`),
+  embedded from YouTube (`youtube-nocookie.com`, no third-party cookies
+  until a visitor presses play — keeps the no-cookie-banner setup from
+  item #9 intact): a gold quinceañera gown, dresses/shoes/fragrance from
+  the shelves, another dress from the collection, and a "dream dress"
+  clip. Not added to the top nav — with 7 links already there, an 8th
+  risked overflowing on medium-width screens (860–1100px) where the nav
+  hasn't switched to the hamburger menu yet.
+- **Fragrance/perfume photos removed from the homepage** per your
+  request — the "Fragrance & More" category photo and one Lookbook grid
+  photo both showed perfume bottles; both now show different real photos
+  from the 165-photo set (a handbag and a pair of rhinestone flats). The
+  now-unused `fragrance-shelf-1`, `fragrance-shelf-2`, and
+  `fragrance-royale-gold` files were deleted from `assets/photos/`. The
+  `#fragrance` section itself (copy, nav link, dropdown option) is
+  unchanged — only its photo changed.
+- **Note, not part of this task:** 3 of the 6 Lookbook grid photos
+  (bride in a forest, bride by a window, pink dress portrait) are still
+  Pexels stock photos, not real Liz Fashion photography — worth swapping
+  for more of the 165 real photos at some point, since the footer no
+  longer discloses that any stock photos remain on the site.
+
 ## ✅ HTTPS live, real photos + reviews added, scope expanded (2026-09-22, later)
 
 - **HTTPS certificate issued and enforced.** shoplizfashion.com now serves

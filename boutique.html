@@ -264,6 +264,15 @@
   .reveal.in{ opacity:1; transform:translateY(0); }
   .lookbook-cta{ text-align:center; margin:50px 0 20px; }
 
+  /* ---------- Videos ---------- */
+  .videos{ padding:90px 0; }
+  .videos-head{ max-width:520px; margin-bottom:44px; }
+  .videos-head h2{ font-size:clamp(2rem,3.4vw,2.8rem); margin-top:12px; }
+  .video-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:32px 28px; }
+  .video-frame{ position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; background:var(--ink); }
+  .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
+  .video-caption{ margin-top:12px; font-size:0.9rem; color:rgba(36,19,24,0.7); }
+
   /* ---------- Story feature ---------- */
   .story{ padding:90px 0; background:var(--wine); color:var(--ivory); }
   .story .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
@@ -398,6 +407,7 @@
     .story .wrap{ grid-template-columns:1fr; }
     .story .ph{ min-height:260px; order:-1; }
     .t-grid{ grid-template-columns:1fr; }
+    .video-grid{ grid-template-columns:1fr; }
     .masonry{ columns:2 160px; }
     .footer-grid{ grid-template-columns:1fr 1fr; }
   }
@@ -553,10 +563,9 @@
   <div class="cat-row" id="fragrance">
     <div class="ph">
       <img
-        src="assets/photos/fragrance-shelf-1-1000w.jpg"
-        srcset="assets/photos/fragrance-shelf-1-500w.jpg 500w, assets/photos/fragrance-shelf-1-1000w.jpg 1000w, assets/photos/fragrance-shelf-1-1600w.jpg 1600w"
+        src="assets/gallery/gallery-030.jpg"
         sizes="(max-width: 860px) 100vw, 50vw"
-        alt="Fragrance display shelf at Liz Fashion, featuring Arabian and designer-inspired perfumes" loading="lazy">
+        alt="Tan and brown leather handbag with a gold clasp, on display at Liz Fashion" loading="lazy" width="640" height="853">
     </div>
     <div class="cat-text">
       <span class="eyebrow">Fragrance &amp; More</span>
@@ -588,10 +597,9 @@
           alt="Navy rhinestone formal dress on display at Liz Fashion" loading="lazy">
       </div>
       <div class="ph mid reveal">
-        <img src="assets/photos/fragrance-royale-gold-1000w.jpg"
-          srcset="assets/photos/fragrance-royale-gold-500w.jpg 500w, assets/photos/fragrance-royale-gold-1000w.jpg 1000w"
+        <img src="assets/gallery/gallery-126.jpg"
           sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw"
-          alt="Fragrance bottle on display at Liz Fashion" loading="lazy">
+          alt="Black rhinestone ballet flats on display at Liz Fashion" loading="lazy" width="640" height="480">
       </div>
       <div class="ph mid reveal">
         <img src="https://images.pexels.com/photos/12730973/pexels-photo-12730973.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -614,6 +622,41 @@
     </div>
     <div class="lookbook-cta">
       <a href="gallery.html" class="btn btn-ghost" data-cta="lookbook-more">View Full Lookbook — All 165 Photos</a>
+    </div>
+  </div>
+</section>
+
+<section class="videos" id="videos" aria-label="Videos">
+  <div class="wrap">
+    <div class="videos-head">
+      <span class="eyebrow">See It In Motion</span>
+      <h2>A closer look, on video.</h2>
+    </div>
+    <div class="video-grid">
+      <div class="reveal">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/A7ERsb5u1gI" title="A gold quinceañera gown at Liz Fashion" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">A gold quinceañera gown, up close.</p>
+      </div>
+      <div class="reveal">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/_EOTHIakz2w" title="Dresses, shoes, and fragrance at Liz Fashion" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Dresses, shoes, and fragrance from the shelves.</p>
+      </div>
+      <div class="reveal">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/l2NithDcYGk" title="A dress from the Liz Fashion collection" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Another look from the collection.</p>
+      </div>
+      <div class="reveal">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/CtJ6wR01jA0" title="A dream dress moment at Liz Fashion" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">A dream-dress moment.</p>
+      </div>
     </div>
   </div>
 </section>
