@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photo Gallery — Liz Fashion</title>
-<meta name="description" content="Browse all 165 real photos from inside Liz Fashion — dresses, fragrance, shoes, and accessories, straight from our shelves.">
+<meta name="description" content="Browse all 165 real photos from inside Liz Fashion, organized by category — fragrance, dresses, shoes, dolls &amp; toys, and more, straight from our shelves.">
 <meta name="theme-color" content="#6B1F33">
 
 <link rel="canonical" href="https://shoplizfashion.com/gallery.html">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Liz Fashion">
 <meta property="og:title" content="Photo Gallery — Liz Fashion">
-<meta property="og:description" content="Browse all 165 real photos from inside Liz Fashion — dresses, fragrance, shoes, and accessories, straight from our shelves.">
+<meta property="og:description" content="Browse all 165 real photos from inside Liz Fashion, organized by category — fragrance, dresses, shoes, dolls &amp; toys, and more, straight from our shelves.">
 <meta property="og:image" content="https://shoplizfashion.com/logo.png">
 <meta property="og:url" content="https://shoplizfashion.com/gallery.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -107,7 +107,7 @@
   }
   .btn:hover{ background:transparent; color:var(--wine); }
 
-  .gallery-head{ padding:64px 0 32px; }
+  .gallery-head{ padding:64px 0 28px; }
   .gallery-head h1{
     font-size:clamp(2rem, 4.4vw, 3rem);
     line-height:1.1;
@@ -124,11 +124,33 @@
   }
   .text-link{ text-decoration:underline; }
 
+  .cat-nav{
+    display:flex; flex-wrap:wrap; gap:10px 18px;
+    padding:20px 0 48px;
+    border-bottom:1px solid rgba(36,19,24,0.1);
+    margin-bottom:48px;
+    font-size:0.88rem;
+  }
+  .cat-nav a{
+    padding:6px 0;
+    border-bottom:2px solid transparent;
+    transition:border-color 0.2s ease, color 0.2s ease;
+  }
+  .cat-nav a:hover{ border-color:var(--gold); color:var(--wine); }
+
+  .cat-section{ padding-bottom:56px; scroll-margin-top:88px; }
+  .cat-head{ margin-bottom:18px; }
+  .cat-head h2{ font-size:clamp(1.3rem, 2.6vw, 1.8rem); margin-bottom:6px; }
+  .cat-head p{ max-width:60ch; color:rgba(36,19,24,0.7); font-size:0.95rem; }
+  .cat-count{
+    display:inline-block; margin-top:8px;
+    font-size:0.8rem; color:var(--wine); font-weight:600;
+  }
+
   .g-grid{
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
     gap:8px;
-    padding-bottom:80px;
   }
   .g-item{
     display:block; position:relative;
@@ -175,20 +197,33 @@
   <div class="wrap">
     <div class="gallery-head">
       <span class="eyebrow">The Full Collection</span>
-      <h1>Everything on our shelves, in one place.</h1>
-      <p>Real photos straight from the store — dresses, fragrance, shoes, and accessories. Click any photo to open it full size. Looking for something specific? <a href="boutique.html#contact" class="text-link">reach out</a> and we'll check what's in stock.</p>
+      <h1>Everything on our shelves, organized by category.</h1>
+      <p>Real photos straight from the store, sorted into categories so it's easy to browse. Click any photo to open it full size. Looking for something specific? <a href="boutique.html#contact" class="text-link">reach out</a> and we'll check what's in stock.</p>
       <span class="gallery-count">165 photos</span>
     </div>
 
-    <div class="g-grid">
+    <nav class="cat-nav" aria-label="Jump to category">
+          <a href="#fragrance">Fragrance</a>
+          <a href="#dresses">Dresses &amp; Gowns</a>
+          <a href="#shoes">Shoes &amp; Footwear</a>
+          <a href="#dolls-toys">Dolls &amp; Toys</a>
+          <a href="#apparel">Apparel &amp; Separates</a>
+          <a href="#handbags">Handbags</a>
+          <a href="#accessories">Jewelry &amp; Accessories</a>
+          <a href="#beauty">Beauty &amp; Wellness</a>
+          <a href="#baby-home">Baby &amp; Home</a>
+          <a href="#more">More From Our Shelves</a>
+    </nav>
+
+    <section class="cat-section" id="fragrance" aria-labelledby="fragrance-h">
+      <div class="cat-head">
+        <h2 id="fragrance-h">Fragrance</h2>
+        <p>Our best-selling wall of designer and Arabic-house perfumes and colognes — from everyday spritzers to collector bottles.</p>
+        <span class="cat-count">86 photos</span>
+      </div>
+      <div class="g-grid">
       <a class="g-item" href="assets/gallery/gallery-001.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-001.jpg" alt="Liz Fashion in-store photo 1 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-002.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-002.jpg" alt="Liz Fashion in-store photo 2 of 165" loading="lazy" width="640" height="1138">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-003.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-003.jpg" alt="Liz Fashion in-store photo 3 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-004.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-004.jpg" alt="Liz Fashion in-store photo 4 of 165" loading="lazy" width="640" height="853">
@@ -202,32 +237,14 @@
       <a class="g-item" href="assets/gallery/gallery-007.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-007.jpg" alt="Liz Fashion in-store photo 7 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-008.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-008.jpg" alt="Liz Fashion in-store photo 8 of 165" loading="lazy" width="640" height="1138">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-009.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-009.jpg" alt="Liz Fashion in-store photo 9 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-010.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-010.jpg" alt="Liz Fashion in-store photo 10 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-011.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-011.jpg" alt="Liz Fashion in-store photo 11 of 165" loading="lazy" width="640" height="480">
       </a>
       <a class="g-item" href="assets/gallery/gallery-012.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-012.jpg" alt="Liz Fashion in-store photo 12 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-013.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-013.jpg" alt="Liz Fashion in-store photo 13 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-014.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-014.jpg" alt="Liz Fashion in-store photo 14 of 165" loading="lazy" width="640" height="1138">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-015.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-015.jpg" alt="Liz Fashion in-store photo 15 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-016.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-016.jpg" alt="Liz Fashion in-store photo 16 of 165" loading="lazy" width="640" height="480">
       </a>
       <a class="g-item" href="assets/gallery/gallery-017.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-017.jpg" alt="Liz Fashion in-store photo 17 of 165" loading="lazy" width="640" height="853">
@@ -237,9 +254,6 @@
       </a>
       <a class="g-item" href="assets/gallery/gallery-019.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-019.jpg" alt="Liz Fashion in-store photo 19 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-020.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-020.jpg" alt="Liz Fashion in-store photo 20 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-021.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-021.jpg" alt="Liz Fashion in-store photo 21 of 165" loading="lazy" width="640" height="480">
@@ -256,47 +270,20 @@
       <a class="g-item" href="assets/gallery/gallery-025.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-025.jpg" alt="Liz Fashion in-store photo 25 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-026.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-026.jpg" alt="Liz Fashion in-store photo 26 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-027.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-027.jpg" alt="Liz Fashion in-store photo 27 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-028.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-028.jpg" alt="Liz Fashion in-store photo 28 of 165" loading="lazy" width="640" height="480">
       </a>
       <a class="g-item" href="assets/gallery/gallery-029.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-029.jpg" alt="Liz Fashion in-store photo 29 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-030.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-030.jpg" alt="Liz Fashion in-store photo 30 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-031.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-031.jpg" alt="Liz Fashion in-store photo 31 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-032.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-032.jpg" alt="Liz Fashion in-store photo 32 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-033.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-033.jpg" alt="Liz Fashion in-store photo 33 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-034.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-034.jpg" alt="Liz Fashion in-store photo 34 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-035.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-035.jpg" alt="Liz Fashion in-store photo 35 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-036.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-036.jpg" alt="Liz Fashion in-store photo 36 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-037.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-037.jpg" alt="Liz Fashion in-store photo 37 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-038.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-038.jpg" alt="Liz Fashion in-store photo 38 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-039.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-039.jpg" alt="Liz Fashion in-store photo 39 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-040.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-040.jpg" alt="Liz Fashion in-store photo 40 of 165" loading="lazy" width="640" height="853">
@@ -310,20 +297,11 @@
       <a class="g-item" href="assets/gallery/gallery-043.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-043.jpg" alt="Liz Fashion in-store photo 43 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-044.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-044.jpg" alt="Liz Fashion in-store photo 44 of 165" loading="lazy" width="640" height="1138">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-045.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-045.jpg" alt="Liz Fashion in-store photo 45 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-046.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-046.jpg" alt="Liz Fashion in-store photo 46 of 165" loading="lazy" width="640" height="480">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-047.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-047.jpg" alt="Liz Fashion in-store photo 47 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-048.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-048.jpg" alt="Liz Fashion in-store photo 48 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-049.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-049.jpg" alt="Liz Fashion in-store photo 49 of 165" loading="lazy" width="640" height="480">
@@ -331,32 +309,11 @@
       <a class="g-item" href="assets/gallery/gallery-050.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-050.jpg" alt="Liz Fashion in-store photo 50 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-051.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-051.jpg" alt="Liz Fashion in-store photo 51 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-052.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-052.jpg" alt="Liz Fashion in-store photo 52 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-053.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-053.jpg" alt="Liz Fashion in-store photo 53 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-054.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-054.jpg" alt="Liz Fashion in-store photo 54 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-055.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-055.jpg" alt="Liz Fashion in-store photo 55 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-056.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-056.jpg" alt="Liz Fashion in-store photo 56 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-057.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-057.jpg" alt="Liz Fashion in-store photo 57 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-058.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-058.jpg" alt="Liz Fashion in-store photo 58 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-059.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-059.jpg" alt="Liz Fashion in-store photo 59 of 165" loading="lazy" width="640" height="1138">
       </a>
       <a class="g-item" href="assets/gallery/gallery-060.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-060.jpg" alt="Liz Fashion in-store photo 60 of 165" loading="lazy" width="640" height="1138">
@@ -373,47 +330,17 @@
       <a class="g-item" href="assets/gallery/gallery-064.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-064.jpg" alt="Liz Fashion in-store photo 64 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-065.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-065.jpg" alt="Liz Fashion in-store photo 65 of 165" loading="lazy" width="640" height="480">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-066.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-066.jpg" alt="Liz Fashion in-store photo 66 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-067.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-067.jpg" alt="Liz Fashion in-store photo 67 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-068.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-068.jpg" alt="Liz Fashion in-store photo 68 of 165" loading="lazy" width="640" height="1138">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-069.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-069.jpg" alt="Liz Fashion in-store photo 69 of 165" loading="lazy" width="640" height="1138">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-070.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-070.jpg" alt="Liz Fashion in-store photo 70 of 165" loading="lazy" width="640" height="480">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-071.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-071.jpg" alt="Liz Fashion in-store photo 71 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-072.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-072.jpg" alt="Liz Fashion in-store photo 72 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-073.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-073.jpg" alt="Liz Fashion in-store photo 73 of 165" loading="lazy" width="640" height="1138">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-074.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-074.jpg" alt="Liz Fashion in-store photo 74 of 165" loading="lazy" width="640" height="480">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-075.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-075.jpg" alt="Liz Fashion in-store photo 75 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-076.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-076.jpg" alt="Liz Fashion in-store photo 76 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-077.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-077.jpg" alt="Liz Fashion in-store photo 77 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-078.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-078.jpg" alt="Liz Fashion in-store photo 78 of 165" loading="lazy" width="640" height="480">
       </a>
       <a class="g-item" href="assets/gallery/gallery-079.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-079.jpg" alt="Liz Fashion in-store photo 79 of 165" loading="lazy" width="640" height="1138">
@@ -433,9 +360,6 @@
       <a class="g-item" href="assets/gallery/gallery-084.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-084.jpg" alt="Liz Fashion in-store photo 84 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-085.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-085.jpg" alt="Liz Fashion in-store photo 85 of 165" loading="lazy" width="640" height="480">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-086.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-086.jpg" alt="Liz Fashion in-store photo 86 of 165" loading="lazy" width="640" height="1138">
       </a>
@@ -444,12 +368,6 @@
       </a>
       <a class="g-item" href="assets/gallery/gallery-088.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-088.jpg" alt="Liz Fashion in-store photo 88 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-089.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-089.jpg" alt="Liz Fashion in-store photo 89 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-090.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-090.jpg" alt="Liz Fashion in-store photo 90 of 165" loading="lazy" width="640" height="1138">
       </a>
       <a class="g-item" href="assets/gallery/gallery-091.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-091.jpg" alt="Liz Fashion in-store photo 91 of 165" loading="lazy" width="640" height="1138">
@@ -462,15 +380,6 @@
       </a>
       <a class="g-item" href="assets/gallery/gallery-094.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-094.jpg" alt="Liz Fashion in-store photo 94 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-095.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-095.jpg" alt="Liz Fashion in-store photo 95 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-096.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-096.jpg" alt="Liz Fashion in-store photo 96 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-097.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-097.jpg" alt="Liz Fashion in-store photo 97 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-098.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-098.jpg" alt="Liz Fashion in-store photo 98 of 165" loading="lazy" width="640" height="1422">
@@ -499,47 +408,14 @@
       <a class="g-item" href="assets/gallery/gallery-106.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-106.jpg" alt="Liz Fashion in-store photo 106 of 165" loading="lazy" width="640" height="1138">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-107.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-107.jpg" alt="Liz Fashion in-store photo 107 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-108.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-108.jpg" alt="Liz Fashion in-store photo 108 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-109.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-109.jpg" alt="Liz Fashion in-store photo 109 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-110.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-110.jpg" alt="Liz Fashion in-store photo 110 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-111.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-111.jpg" alt="Liz Fashion in-store photo 111 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-112.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-112.jpg" alt="Liz Fashion in-store photo 112 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-113.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-113.jpg" alt="Liz Fashion in-store photo 113 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-114.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-114.jpg" alt="Liz Fashion in-store photo 114 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-115.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-115.jpg" alt="Liz Fashion in-store photo 115 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-116.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-116.jpg" alt="Liz Fashion in-store photo 116 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-117.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-117.jpg" alt="Liz Fashion in-store photo 117 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-118.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-118.jpg" alt="Liz Fashion in-store photo 118 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-119.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-119.jpg" alt="Liz Fashion in-store photo 119 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-120.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-120.jpg" alt="Liz Fashion in-store photo 120 of 165" loading="lazy" width="640" height="480">
       </a>
       <a class="g-item" href="assets/gallery/gallery-121.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-121.jpg" alt="Liz Fashion in-store photo 121 of 165" loading="lazy" width="640" height="853">
@@ -553,50 +429,11 @@
       <a class="g-item" href="assets/gallery/gallery-124.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-124.jpg" alt="Liz Fashion in-store photo 124 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-125.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-125.jpg" alt="Liz Fashion in-store photo 125 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-126.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-126.jpg" alt="Liz Fashion in-store photo 126 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-127.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-127.jpg" alt="Liz Fashion in-store photo 127 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-128.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-128.jpg" alt="Liz Fashion in-store photo 128 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-129.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-129.jpg" alt="Liz Fashion in-store photo 129 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-130.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-130.jpg" alt="Liz Fashion in-store photo 130 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-131.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-131.jpg" alt="Liz Fashion in-store photo 131 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-132.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-132.jpg" alt="Liz Fashion in-store photo 132 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-133.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-133.jpg" alt="Liz Fashion in-store photo 133 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-134.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-134.jpg" alt="Liz Fashion in-store photo 134 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-135.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-135.jpg" alt="Liz Fashion in-store photo 135 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-136.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-136.jpg" alt="Liz Fashion in-store photo 136 of 165" loading="lazy" width="640" height="1387">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-137.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-137.jpg" alt="Liz Fashion in-store photo 137 of 165" loading="lazy" width="640" height="480">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-138.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-138.jpg" alt="Liz Fashion in-store photo 138 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-139.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-139.jpg" alt="Liz Fashion in-store photo 139 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-140.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-140.jpg" alt="Liz Fashion in-store photo 140 of 165" loading="lazy" width="640" height="480">
@@ -610,29 +447,14 @@
       <a class="g-item" href="assets/gallery/gallery-143.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-143.jpg" alt="Liz Fashion in-store photo 143 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-144.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-144.jpg" alt="Liz Fashion in-store photo 144 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-145.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-145.jpg" alt="Liz Fashion in-store photo 145 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-146.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-146.jpg" alt="Liz Fashion in-store photo 146 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-147.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-147.jpg" alt="Liz Fashion in-store photo 147 of 165" loading="lazy" width="640" height="480">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-148.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-148.jpg" alt="Liz Fashion in-store photo 148 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-149.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-149.jpg" alt="Liz Fashion in-store photo 149 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-150.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-150.jpg" alt="Liz Fashion in-store photo 150 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-151.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-151.jpg" alt="Liz Fashion in-store photo 151 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-152.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-152.jpg" alt="Liz Fashion in-store photo 152 of 165" loading="lazy" width="640" height="853">
@@ -643,23 +465,11 @@
       <a class="g-item" href="assets/gallery/gallery-154.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-154.jpg" alt="Liz Fashion in-store photo 154 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-155.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-155.jpg" alt="Liz Fashion in-store photo 155 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-156.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-156.jpg" alt="Liz Fashion in-store photo 156 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-157.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-157.jpg" alt="Liz Fashion in-store photo 157 of 165" loading="lazy" width="640" height="480">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-158.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-158.jpg" alt="Liz Fashion in-store photo 158 of 165" loading="lazy" width="640" height="853">
-      </a>
       <a class="g-item" href="assets/gallery/gallery-159.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-159.jpg" alt="Liz Fashion in-store photo 159 of 165" loading="lazy" width="640" height="853">
-      </a>
-      <a class="g-item" href="assets/gallery/gallery-160.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-160.jpg" alt="Liz Fashion in-store photo 160 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-161.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-161.jpg" alt="Liz Fashion in-store photo 161 of 165" loading="lazy" width="640" height="480">
@@ -670,13 +480,335 @@
       <a class="g-item" href="assets/gallery/gallery-163.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-163.jpg" alt="Liz Fashion in-store photo 163 of 165" loading="lazy" width="640" height="853">
       </a>
-      <a class="g-item" href="assets/gallery/gallery-164.jpg" target="_blank" rel="noopener">
-        <img src="assets/gallery/gallery-164.jpg" alt="Liz Fashion in-store photo 164 of 165" loading="lazy" width="640" height="1138">
+      </div>
+    </section>
+
+    <section class="cat-section" id="dresses" aria-labelledby="dresses-h">
+      <div class="cat-head">
+        <h2 id="dresses-h">Dresses &amp; Gowns</h2>
+        <p>Quinceañera ball gowns, prom dresses, and everyday maxi dresses — ready to try on in store.</p>
+        <span class="cat-count">12 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-002.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-002.jpg" alt="Liz Fashion in-store photo 2 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-003.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-003.jpg" alt="Liz Fashion in-store photo 3 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-020.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-020.jpg" alt="Liz Fashion in-store photo 20 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-033.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-033.jpg" alt="Liz Fashion in-store photo 33 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-034.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-034.jpg" alt="Liz Fashion in-store photo 34 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-036.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-036.jpg" alt="Liz Fashion in-store photo 36 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-095.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-095.jpg" alt="Liz Fashion in-store photo 95 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-096.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-096.jpg" alt="Liz Fashion in-store photo 96 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-107.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-107.jpg" alt="Liz Fashion in-store photo 107 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-110.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-110.jpg" alt="Liz Fashion in-store photo 110 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-125.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-125.jpg" alt="Liz Fashion in-store photo 125 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-160.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-160.jpg" alt="Liz Fashion in-store photo 160 of 165" loading="lazy" width="640" height="853">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="shoes" aria-labelledby="shoes-h">
+      <div class="cat-head">
+        <h2 id="shoes-h">Shoes &amp; Footwear</h2>
+        <p>Heels, flats, sandals, slides, and boots for every outfit.</p>
+        <span class="cat-count">13 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-011.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-011.jpg" alt="Liz Fashion in-store photo 11 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-028.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-028.jpg" alt="Liz Fashion in-store photo 28 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-046.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-046.jpg" alt="Liz Fashion in-store photo 46 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-057.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-057.jpg" alt="Liz Fashion in-store photo 57 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-065.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-065.jpg" alt="Liz Fashion in-store photo 65 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-074.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-074.jpg" alt="Liz Fashion in-store photo 74 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-085.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-085.jpg" alt="Liz Fashion in-store photo 85 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-090.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-090.jpg" alt="Liz Fashion in-store photo 90 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-116.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-116.jpg" alt="Liz Fashion in-store photo 116 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-119.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-119.jpg" alt="Liz Fashion in-store photo 119 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-120.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-120.jpg" alt="Liz Fashion in-store photo 120 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-126.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-126.jpg" alt="Liz Fashion in-store photo 126 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-127.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-127.jpg" alt="Liz Fashion in-store photo 127 of 165" loading="lazy" width="640" height="480">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="dolls-toys" aria-labelledby="dolls-toys-h">
+      <div class="cat-head">
+        <h2 id="dolls-toys-h">Dolls &amp; Toys</h2>
+        <p>Plush characters, collectible figures, and novelty keychains.</p>
+        <span class="cat-count">11 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-016.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-016.jpg" alt="Liz Fashion in-store photo 16 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-032.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-032.jpg" alt="Liz Fashion in-store photo 32 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-048.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-048.jpg" alt="Liz Fashion in-store photo 48 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-051.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-051.jpg" alt="Liz Fashion in-store photo 51 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-053.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-053.jpg" alt="Liz Fashion in-store photo 53 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-070.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-070.jpg" alt="Liz Fashion in-store photo 70 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-073.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-073.jpg" alt="Liz Fashion in-store photo 73 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-077.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-077.jpg" alt="Liz Fashion in-store photo 77 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-078.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-078.jpg" alt="Liz Fashion in-store photo 78 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-133.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-133.jpg" alt="Liz Fashion in-store photo 133 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-147.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-147.jpg" alt="Liz Fashion in-store photo 147 of 165" loading="lazy" width="640" height="480">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="apparel" aria-labelledby="apparel-h">
+      <div class="cat-head">
+        <h2 id="apparel-h">Apparel &amp; Separates</h2>
+        <p>Tops, bottoms, jumpsuits, and coordinated sets for everyday and going-out looks.</p>
+        <span class="cat-count">16 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-008.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-008.jpg" alt="Liz Fashion in-store photo 8 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-009.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-009.jpg" alt="Liz Fashion in-store photo 9 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-013.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-013.jpg" alt="Liz Fashion in-store photo 13 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-026.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-026.jpg" alt="Liz Fashion in-store photo 26 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-039.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-039.jpg" alt="Liz Fashion in-store photo 39 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-044.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-044.jpg" alt="Liz Fashion in-store photo 44 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-056.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-056.jpg" alt="Liz Fashion in-store photo 56 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-072.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-072.jpg" alt="Liz Fashion in-store photo 72 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-109.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-109.jpg" alt="Liz Fashion in-store photo 109 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-111.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-111.jpg" alt="Liz Fashion in-store photo 111 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-112.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-112.jpg" alt="Liz Fashion in-store photo 112 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-113.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-113.jpg" alt="Liz Fashion in-store photo 113 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-115.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-115.jpg" alt="Liz Fashion in-store photo 115 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-156.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-156.jpg" alt="Liz Fashion in-store photo 156 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-158.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-158.jpg" alt="Liz Fashion in-store photo 158 of 165" loading="lazy" width="640" height="853">
       </a>
       <a class="g-item" href="assets/gallery/gallery-165.jpg" target="_blank" rel="noopener">
         <img src="assets/gallery/gallery-165.jpg" alt="Liz Fashion in-store photo 165 of 165" loading="lazy" width="640" height="853">
       </a>
-    </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="handbags" aria-labelledby="handbags-h">
+      <div class="cat-head">
+        <h2 id="handbags-h">Handbags</h2>
+        <p>Crossbody bags and totes to finish off any outfit.</p>
+        <span class="cat-count">2 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-030.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-030.jpg" alt="Liz Fashion in-store photo 30 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-128.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-128.jpg" alt="Liz Fashion in-store photo 128 of 165" loading="lazy" width="640" height="480">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="accessories" aria-labelledby="accessories-h">
+      <div class="cat-head">
+        <h2 id="accessories-h">Jewelry &amp; Accessories</h2>
+        <p>Tiaras, jewelry sets, and knit or plush character hats and headbands.</p>
+        <span class="cat-count">8 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-052.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-052.jpg" alt="Liz Fashion in-store photo 52 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-055.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-055.jpg" alt="Liz Fashion in-store photo 55 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-076.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-076.jpg" alt="Liz Fashion in-store photo 76 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-117.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-117.jpg" alt="Liz Fashion in-store photo 117 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-129.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-129.jpg" alt="Liz Fashion in-store photo 129 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-132.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-132.jpg" alt="Liz Fashion in-store photo 132 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-139.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-139.jpg" alt="Liz Fashion in-store photo 139 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-148.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-148.jpg" alt="Liz Fashion in-store photo 148 of 165" loading="lazy" width="640" height="853">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="beauty" aria-labelledby="beauty-h">
+      <div class="cat-head">
+        <h2 id="beauty-h">Beauty &amp; Wellness</h2>
+        <p>Makeup and personal-care picks from our shelves.</p>
+        <span class="cat-count">3 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-136.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-136.jpg" alt="Liz Fashion in-store photo 136 of 165" loading="lazy" width="640" height="1387">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-137.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-137.jpg" alt="Liz Fashion in-store photo 137 of 165" loading="lazy" width="640" height="480">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-146.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-146.jpg" alt="Liz Fashion in-store photo 146 of 165" loading="lazy" width="640" height="853">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="baby-home" aria-labelledby="baby-home-h">
+      <div class="cat-head">
+        <h2 id="baby-home-h">Baby &amp; Home</h2>
+        <p>Soft baby blankets and home extras.</p>
+        <span class="cat-count">3 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-130.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-130.jpg" alt="Liz Fashion in-store photo 130 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-131.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-131.jpg" alt="Liz Fashion in-store photo 131 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-135.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-135.jpg" alt="Liz Fashion in-store photo 135 of 165" loading="lazy" width="640" height="853">
+      </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="more" aria-labelledby="more-h">
+      <div class="cat-head">
+        <h2 id="more-h">More From Our Shelves</h2>
+        <p>A few more snapshots from around the store.</p>
+        <span class="cat-count">11 photos</span>
+      </div>
+      <div class="g-grid">
+      <a class="g-item" href="assets/gallery/gallery-014.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-014.jpg" alt="Liz Fashion in-store photo 14 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-038.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-038.jpg" alt="Liz Fashion in-store photo 38 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-059.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-059.jpg" alt="Liz Fashion in-store photo 59 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-068.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-068.jpg" alt="Liz Fashion in-store photo 68 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-069.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-069.jpg" alt="Liz Fashion in-store photo 69 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-089.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-089.jpg" alt="Liz Fashion in-store photo 89 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-097.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-097.jpg" alt="Liz Fashion in-store photo 97 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-144.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-144.jpg" alt="Liz Fashion in-store photo 144 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-151.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-151.jpg" alt="Liz Fashion in-store photo 151 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-155.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-155.jpg" alt="Liz Fashion in-store photo 155 of 165" loading="lazy" width="640" height="853">
+      </a>
+      <a class="g-item" href="assets/gallery/gallery-164.jpg" target="_blank" rel="noopener">
+        <img src="assets/gallery/gallery-164.jpg" alt="Liz Fashion in-store photo 164 of 165" loading="lazy" width="640" height="1138">
+      </a>
+      </div>
+    </section>
   </div>
 </main>
 
