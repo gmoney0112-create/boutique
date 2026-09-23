@@ -329,6 +329,19 @@
   .contact-form .btn{ justify-self:start; }
   .form-note{ font-size:0.8rem; color:rgba(36,19,24,0.55); margin-top:4px; }
 
+  .form-status{ font-size:0.9rem; }
+  .form-status:empty{ display:none; }
+  [data-fs-success].form-status{
+    color:var(--wine); background:rgba(107,31,51,0.08);
+    border:1px solid rgba(107,31,51,0.25); padding:14px 16px;
+  }
+  [data-fs-error].form-status{
+    color:#8a1f1f; background:rgba(178,34,34,0.07);
+    border:1px solid rgba(178,34,34,0.3); padding:14px 16px;
+  }
+  .field-error{ display:block; font-size:0.78rem; color:#b22222; margin-top:2px; }
+  .field-error:empty{ display:none; }
+
   .visit-info{
     max-width:520px; margin:44px auto 0; text-align:left;
     display:grid; gap:6px;
@@ -726,28 +739,28 @@
       <a class="directions-link" href="https://www.google.com/maps/search/?api=1&query=1331+Bandera+Rd%2C+San+Antonio%2C+TX+78228" target="_blank" rel="noopener">Get directions</a>
     </div>
 
-    <!--
-      TODO (LAUNCH_CHECKLIST.md #23): this form does not deliver anywhere yet.
-      Create a free endpoint at https://formspree.io (or use Netlify Forms if
-      hosting on Netlify) pointed at Reynalopez0329@gmail.com, then replace
-      the action URL below with your real one.
-    -->
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xyezjbee" method="POST">
+      <div data-fs-success class="form-status" role="status"></div>
+      <div data-fs-error class="form-status" role="alert"></div>
+
       <div class="form-row">
         <label for="cf-name">Name</label>
-        <input id="cf-name" name="name" type="text" required autocomplete="name">
+        <input id="cf-name" name="name" type="text" required autocomplete="name" data-fs-field>
+        <span data-fs-error="name" class="field-error"></span>
       </div>
       <div class="form-row">
         <label for="cf-email">Email</label>
-        <input id="cf-email" name="email" type="email" required autocomplete="email">
+        <input id="cf-email" name="email" type="email" required autocomplete="email" data-fs-field>
+        <span data-fs-error="email" class="field-error"></span>
       </div>
       <div class="form-row">
         <label for="cf-phone">Phone (optional)</label>
-        <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+        <input id="cf-phone" name="phone" type="tel" autocomplete="tel" data-fs-field>
+        <span data-fs-error="phone" class="field-error"></span>
       </div>
       <div class="form-row">
         <label for="cf-occasion">Occasion</label>
-        <select id="cf-occasion" name="occasion">
+        <select id="cf-occasion" name="occasion" data-fs-field>
           <option value="bridal">Bridal</option>
           <option value="quinceanera">Quinceañera</option>
           <option value="formal">Formal &amp; Prom</option>
@@ -758,14 +771,15 @@
       </div>
       <div class="form-row">
         <label for="cf-message">Tell us what you're looking for</label>
-        <textarea id="cf-message" name="message" rows="4"></textarea>
+        <textarea id="cf-message" name="message" rows="4" data-fs-field></textarea>
+        <span data-fs-error="message" class="field-error"></span>
       </div>
       <!-- Honeypot spam trap — invisible to real visitors, catches basic bots -->
       <div class="form-row hp-field" aria-hidden="true">
         <label for="cf-company">Company</label>
         <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
       </div>
-      <button type="submit" class="btn" data-cta="contact-submit">Request an Appointment</button>
+      <button type="submit" class="btn" data-cta="contact-submit" data-fs-submit-btn>Request an Appointment</button>
       <p class="form-note">We'll get back to you to confirm your appointment time.</p>
     </form>
   </div>
@@ -871,6 +885,15 @@
     el.addEventListener('click', ()=> trackCTA(el.getAttribute('data-cta')));
   });
 </script>
+
+<script>
+  // Contact form: AJAX submit via Formspree, so visitors see an inline
+  // success/error message instead of leaving the page. Degrades to a
+  // normal POST (redirects to Formspree) if this script fails to load.
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'xyezjbee' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
