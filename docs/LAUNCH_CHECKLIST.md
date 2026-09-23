@@ -8,7 +8,30 @@ you can make — nothing here was fabricated to fill those gaps).
 
 Legend: ✅ done in this repo · 🟡 partially done / needs one more step · ⬜ needs you
 
-## ✅ Homepage videos added, fragrance photos swapped out (2026-09-23)
+## ✅ Lookbook stock photos replaced; bridal photo search came up empty (2026-09-23, later)
+
+- **All 4 remaining stock photos in the Lookbook grid replaced** with real
+  photos from the 165-photo set: a cream/gold pearl-beaded quinceañera
+  gown with tiara, a blue rhinestone jewelry set, a black glitter
+  off-shoulder gown, and a set of character keychains. Combined with the
+  earlier fragrance-photo swap, **all 6 Lookbook photos are now real** —
+  the only non-owner-photo images left on the homepage are the hero
+  background and the "Our Story" dressmaker photo, both still Pexels
+  stock (not flagged as an issue — the footer disclosure was specifically
+  about the Lookbook, per the earlier task).
+- **Bridal category photo — still stock, and it needs to stay that way
+  for now.** Re-reviewed all 12 dress photos in the 165-photo set
+  specifically looking for a wedding gown: none qualify. Every one is a
+  quinceañera ball gown (several worn with a tiara), a prom/formal dress,
+  or a party dress — red, black, brown, floral, or champagne-colored, not
+  a traditional white bridal gown. Swapping in the closest look-alike
+  (the champagne pearl ball gown, now used in the Lookbook instead) would
+  have mislabeled a quinceañera dress as a wedding gown. **This needs a
+  real photo of an actual bridal gown from the shop** — worth asking
+  Elizabeth whether Liz Fashion carries bridal gowns as separate stock
+  from quinceañera gowns (the Bridal section's pricing has also been
+  unknown since item #13), since none of the owner-photographed inventory
+  reviewed so far clearly shows one.
 
 - **4 real videos added** to a new "See It In Motion" section (`#videos`),
   embedded from YouTube (`youtube-nocookie.com`, no third-party cookies
